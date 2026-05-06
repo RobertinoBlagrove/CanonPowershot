@@ -50,18 +50,26 @@ const looksSane = (n, source) => {
 };
 
 // ── ENRICH RESULTS ─────────────────────────────────────────────────
+const isAmazonUrl = (u) => /amazon\./i.test(u || '');
 const enriched = results.map(r => {
   const rawNum = parsePrice(r.price);
   const sane = looksSane(rawNum, r.source);
-  const priceNum = sane ? rawNum : null;
+  // Amazon: wantrouwen — heuristiek-data is daar niet betrouwbaar
+  const amazonFlaky = isAmazonUrl(r.url) && r.source === 'heuristic';
+  const priceNum = sane && !amazonFlaky ? rawNum : null;
+  // Amazon stock detection ook niet vertrouwen tenzij json-ld
+  const stockTrust = isAmazonUrl(r.url) && r.source !== 'json-ld' ? 'unknown' : r.stock;
   return {
     ...r,
     price_raw: r.price,
     price_num: priceNum,
     price_display: fmtPrice(priceNum),
     price_rejected: rawNum != null && !sane ? rawNum : null,
-    stock_icon: stockIcon(r.stock),
-    source_label: sourceLabel(r.source),
+    stock: stockTrust,
+    stock_original: r.stock,
+    stock_icon: stockIcon(stockTrust),
+    source_label: sourceLabel(r.source) + (amazonFlaky ? ' (Amazon-heuristiek, niet vertrouwd)' : ''),
+    bot_blocked: isAmazonUrl(r.url) && (r.source === 'heuristic' || r.source === null),
     valid_for_summary: r.verified_mark_iii !== false && r.variant !== 'refurbished'
   };
 });
@@ -85,14 +93,19 @@ const inStockHard = enriched.filter(r => r.stock === 'in_stock' && r.price_num &
 const outStock = enriched.filter(r => r.stock === 'out_of_stock').length;
 const unknown = enriched.filter(r => r.stock === 'unknown').length;
 
+// Amazon serveert een gestripte pagina aan headless Chromium — alle "prijzen"
+// die we van Amazon halen zijn heuristiek-junk (gerelateerde producten/accessoires).
+// Tot we echte stealth-setup hebben (playwright-extra met stealth plugin),
+// vertrouwen we Amazon-data niet voor cheapest-overall berekeningen.
+const isAmazon = (r) => /amazon\./i.test(r.url || '');
 const cheapestOverall = enriched
-  .filter(r => r.stock === 'in_stock' && r.price_num && r.valid_for_summary)
+  .filter(r => r.stock === 'in_stock' && r.price_num && r.valid_for_summary && !isAmazon(r))
   .sort((a, b) => a.price_num - b.price_num)[0];
 
 const cheapestByCountry = {};
 for (const c of ['NL', 'BE', 'DE', 'FR']) {
   cheapestByCountry[c] = byCountry[c]
-    .filter(r => r.stock === 'in_stock' && r.price_num && r.valid_for_summary)
+    .filter(r => r.stock === 'in_stock' && r.price_num && r.valid_for_summary && !isAmazon(r))
     .sort((a, b) => a.price_num - b.price_num)[0];
 }
 
