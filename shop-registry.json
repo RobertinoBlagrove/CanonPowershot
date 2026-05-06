@@ -56,5 +56,13 @@
   {"shop":"Foto Brenner (Silver)","country":"DE","url":"https://www.fotobrenner.de/canon-powershot-g7-x-iii-silber","type":"fotospeciaalzaak","variant_label":"Silver body","first_seen":"2026-05-05","scrape_hints":{}},
   {"shop":"Foto Brenner (Vlogkit)","country":"DE","url":"https://www.fotobrenner.de/canon-powershot-g7x-mark-iii-vlogger-kit-schwarz","type":"fotospeciaalzaak","variant_label":"Black Vlogkit","first_seen":"2026-05-05","scrape_hints":{}},
   {"shop":"Canon DE Store (Black)","country":"DE","url":"https://www.canon.de/store/store/canon-powershot-g7-x-mark-iii-kompaktkamera-schwarz/3637C002/","type":"manufacturer","variant_label":"Black body","first_seen":"2026-05-05","scrape_hints":{}},
-  {"shop":"Canon DE Store (Silver)","country":"DE","url":"https://www.canon.de/store/store/canon-powershot-g7-x-mark-iii-kompaktkamera-silber/3638C002/","type":"manufacturer","variant_label":"Silver body","first_seen":"2026-05-05","scrape_hints":{}}
+  {"shop":"Canon DE Store (Silver)","country":"DE","url":"https://www.canon.de/store/store/canon-powershot-g7-x-mark-iii-kompaktkamera-silber/3638C002/","type":"manufacturer","variant_label":"Silver body","first_seen":"2026-05-05","scrape_hints":{}},
+
+  {"shop":"Amazon.fr (Black)","country":"FR","url":"https://www.amazon.fr/dp/B07V3NBJC3","type":"marketplace","variant_label":"Black body","first_seen":"2026-05-06","scrape_hints":{},"ships_to":["NL","BE","DE","FR"]},
+  {"shop":"Amazon.fr (Silver)","country":"FR","url":"https://www.amazon.fr/dp/B07V7Y1813","type":"marketplace","variant_label":"Silver body","first_seen":"2026-05-06","scrape_hints":{},"ships_to":["NL","BE","DE","FR"]},
+  {"shop":"FNAC France (Black)","country":"FR","url":"https://www.fnac.com/Canon-PowerShot-G7X-Mark-III-Noir-Appareil-photo-numerique/a13657091","type":"retail-electronics","variant_label":"Black body","first_seen":"2026-05-06","scrape_hints":{}},
+  {"shop":"Darty","country":"FR","url":"https://www.darty.com/nav/recherche.html?text=Canon+PowerShot+G7X+Mark+III","type":"retail-electronics","variant_label":"search","first_seen":"2026-05-06","scrape_hints":{}},
+  {"shop":"Boulanger","country":"FR","url":"https://www.boulanger.com/c/recherche?tr=canon+powershot+g7x+mark+iii","type":"retail-electronics","variant_label":"search","first_seen":"2026-05-06","scrape_hints":{}},
+  {"shop":"Digit-Photo","country":"FR","url":"https://www.digit-photo.com/CANON-PowerShot-G7X-Mark-III-Noir-rEAN4549292137903.html","type":"fotospeciaalzaak","variant_label":"Black body","first_seen":"2026-05-06","scrape_hints":{}},
+  {"shop":"Miss Numérique","country":"FR","url":"https://www.missnumerique.com/canon-powershot-g7-x-mark-iii-noir-p-15793.html","type":"fotospeciaalzaak","variant_label":"Black body","first_seen":"2026-05-06","scrape_hints":{}}
 ]

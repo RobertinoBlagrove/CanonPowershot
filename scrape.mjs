@@ -126,24 +126,65 @@ for (const t of registry) {
         }
       }
 
-      // VOORRAAD-detectie via tekst (als JSON-LD niets gaf)
+      // VOORRAAD-detectie via tekst (als JSON-LD niets gaf).
+      // STRICT: ✅ in_stock alleen bij expliciete bevestiging EN geen tegen-signaal.
+      // Out-of-stock checks RUNNEN EERST en winnen bij conflict. Default = unknown (❓).
       if (out.stock === 'unknown') {
-        const txt = document.body.innerText.toLowerCase().slice(0, 20000);
-        const inStock = [
-          /op voorraad/, /direct leverbaar/, /vandaag besteld/,
-          /morgen in huis/, /verzonden binnen \d/, /auf lager/,
-          /sofort lieferbar/, /lieferung in \d/, /\bin stock\b/,
-          /verzending vandaag/, /\d+ op voorraad/, /direct beschikbaar/,
-          /direkt verfügbar/, /sofort verfügbar/
+        const fullTxt = document.body.innerText.toLowerCase().slice(0, 30000);
+        const txt = fullTxt; // alias
+
+        // Strong out-of-stock signals (page-level)
+        const outStockHard = [
+          /\bniet leverbaar\b/,                        // bol.com NL
+          /helaas is bezorging niet mogelijk/,        // mediamarkt NL/BE/DE
+          /helaas is afhalen op de markt niet mogelijk/,
+          /binnenkort weer beschikbaar/,              // mediamarkt
+          /benachrichtige? mich(?: per e-?mail)?/,    // mediamarkt DE notify-me
+          /benachrichtigen sie mich/,
+          /e-mail mij wanneer (dit )?beschikbaar/,
+          /stuur mij een bericht/,                    // bol.com notify
+          /melde mich, sobald/,
+          /\buitverkocht\b/, /\bausverkauft\b/, /\bvergriffen\b/,
+          /\bsold out\b/, /\bout of stock\b/, /\bépuisé\b/,
+          /\bniet (meer )?op voorraad\b/,
+          /tijdelijk niet beschikbaar/, /tijdelijk uitverkocht/,
+          /nicht (mehr )?verfügbar/, /derzeit nicht verfügbar/, /momentan nicht verfügbar/,
+          /nicht (mehr )?lieferbar/, /nicht auf lager/,
+          /currently unavailable/, /not available/,
+          /no longer available/, /n'est plus disponible/, /indisponible/,
+          /notify me when (this is )?(back )?in stock/,
+          /benachrichtigung anfordern/,
+          /article épuisé/, /produit indisponible/,
+          /uitverkocht\.\s|verkocht/
         ];
-        const outStock = [
-          /uitverkocht/, /niet (meer )?leverbaar/, /tijdelijk niet beschikbaar/,
-          /nicht (mehr )?verfügbar/, /ausverkauft/, /\bout of stock\b/,
-          /niet op voorraad/, /vergriffen/, /derzeit nicht verfügbar/,
-          /tijdelijk uitverkocht/, /sold out/, /épuisé/, /nicht auf lager/
+
+        // Strong in-stock signals — moeten EXPLICIET zijn
+        const inStockHard = [
+          /\bop voorraad\b(?!\s*bij)/,    // "op voorraad" maar niet "op voorraad bij ..." (dat is tabel-header)
+          /\bdirect leverbaar\b/,
+          /\bvandaag besteld[, ]+morgen in huis/,
+          /verzonden binnen \d+ (werkdag|dag|uur)/,
+          /\bauf lager\b/, /\bsofort lieferbar\b/, /\bsofort verfügbar\b/,
+          /lieferung in \d+ (tag|werktag|stunde)/,
+          /\d+\s+op voorraad/, /\d+\s+stuks op voorraad/,
+          /direct beschikbaar voor verzending/,
+          /\bin stock\b(?!\s*at)/,
+          /vandaag verzonden/, /vandaag voor \d{1,2}:\d{2}/
         ];
-        if (inStock.some(r => r.test(txt))) out.stock = 'in_stock';
-        else if (outStock.some(r => r.test(txt))) out.stock = 'out_of_stock';
+
+        const hasOos = outStockHard.some(r => r.test(txt));
+        if (hasOos) {
+          out.stock = 'out_of_stock';
+        } else {
+          // Conservatieve in-stock: alleen bij EXPLICIETE match, niet als er twijfel is
+          const hasInStock = inStockHard.some(r => r.test(txt));
+          // Extra guard: als pagina een "notify me" / "wishlist alleen" knop heeft, NIET in_stock
+          const hasNotifySignal = /benachrichtige|notify me|stuur mij een bericht|e-mail mij/.test(txt);
+          if (hasInStock && !hasNotifySignal) {
+            out.stock = 'in_stock';
+            out.stock_evidence = inStockHard.find(r => r.test(txt))?.toString().slice(0, 80);
+          }
+        }
       }
 
       // VERIFIEER Mark III

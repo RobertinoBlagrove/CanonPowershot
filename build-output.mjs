@@ -65,7 +65,7 @@ const enriched = results.map(r => {
   };
 });
 
-const byCountry = { NL: [], BE: [], DE: [] };
+const byCountry = { NL: [], BE: [], DE: [], FR: [] };
 for (const r of enriched) {
   if (byCountry[r.country]) byCountry[r.country].push(r);
 }
@@ -89,7 +89,7 @@ const cheapestOverall = enriched
   .sort((a, b) => a.price_num - b.price_num)[0];
 
 const cheapestByCountry = {};
-for (const c of ['NL', 'BE', 'DE']) {
+for (const c of ['NL', 'BE', 'DE', 'FR']) {
   cheapestByCountry[c] = byCountry[c]
     .filter(r => r.stock === 'in_stock' && r.price_num && r.valid_for_summary)
     .sort((a, b) => a.price_num - b.price_num)[0];
@@ -124,6 +124,7 @@ _Live: https://robertinoblagrove.github.io/CanonPowershot/_
 - **Goedkoopste in NL**: ${cheapestByCountry.NL ? `${cheapestByCountry.NL.shop} — ${cheapestByCountry.NL.price_display}` : '❓'}
 - **Goedkoopste in BE**: ${cheapestByCountry.BE ? `${cheapestByCountry.BE.shop} — ${cheapestByCountry.BE.price_display}` : '❓'}
 - **Goedkoopste in DE**: ${cheapestByCountry.DE ? `${cheapestByCountry.DE.shop} — ${cheapestByCountry.DE.price_display}` : '❓'}
+- **Goedkoopste in FR** (kan naar NL leveren): ${cheapestByCountry.FR ? `${cheapestByCountry.FR.shop} — ${cheapestByCountry.FR.price_display}` : '❓'}
 
 ## Nederland
 
@@ -136,6 +137,10 @@ ${mdTable(byCountry.BE)}
 ## Duitsland
 
 ${mdTable(byCountry.DE)}
+
+## Frankrijk (kan leveren naar NL)
+
+${mdTable(byCountry.FR)}
 
 ## Run-log
 
@@ -288,6 +293,9 @@ const html = `<!doctype html>
 
   <h2 class="country">🇩🇪 Duitsland (${byCountry.DE.length})</h2>
   ${htmlTable(byCountry.DE)}
+
+  <h2 class="country">🇫🇷 Frankrijk (${byCountry.FR.length}) <small style="font-size: 13px; color: #666; font-weight: 400;">— levert ook naar NL</small></h2>
+  ${htmlTable(byCountry.FR)}
 </main>
 
 <footer>
