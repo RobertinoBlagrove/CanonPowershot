@@ -112,13 +112,27 @@ for (const t of registry) {
         if (metaPrice?.content) { out.price = metaPrice.content; out.source = 'meta-tag'; }
       }
 
-      // 4. Heuristiek: leaf-elementen met €-prijs
+      // 4. Heuristiek: leaf-elementen met €-prijs.
+      // STRIKT: vereis € symbool OF expliciet decimaal-formaat (XXX,XX of X.XXX,XX).
+      // Dit voorkomt "20", "99", "15", "115" e.d. die voorkomen als review-counts of % .
       if (!out.price) {
         const all = [...document.querySelectorAll('span, div, p, strong, b')];
         const candidates = all
           .filter(el => el.children.length === 0)
           .map(el => (el.textContent || '').trim())
-          .filter(t => /^€?\s?\d{2,4}([,.]\d{2})?\s?€?$/.test(t) && t.length < 20)
+          .filter(t => t.length < 20)
+          .filter(t => {
+            // Must contain € OR have decimal pattern X,XX or X.XX
+            const hasEuro = t.includes('€');
+            const hasDecimal = /\d[,.]\d{2}\b/.test(t);
+            if (!hasEuro && !hasDecimal) return false;
+            // Must look like a real price: 3-4 digit integer part
+            const m = t.match(/(\d{1,2}[.\s]\d{3}|\d{3,4})([,.]\d{2})?/);
+            if (!m) return false;
+            // Reject if integer part is suspiciously small (e.g. "1,00", "9,95")
+            const intPart = parseInt(m[1].replace(/[.\s]/g, ''));
+            return intPart >= 200 && intPart <= 9999;
+          })
           .slice(0, 5);
         if (candidates.length) {
           out.price = candidates[0];

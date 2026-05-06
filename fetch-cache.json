@@ -169,37 +169,55 @@
   },
   "www.amazon.fr": {
     "last_status": 200,
-    "last_attempt": "2026-05-06T10:54:20.023Z",
+    "last_attempt": "2026-05-06T12:36:41.677Z",
     "consecutive_fails": 0,
     "preferred_method": "heuristic"
   },
   "www.fnac.com": {
     "last_status": 403,
-    "last_attempt": "2026-05-06T10:54:26.662Z",
+    "last_attempt": "2026-05-06T12:36:48.197Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.darty.com": {
     "last_status": 403,
-    "last_attempt": "2026-05-06T10:54:31.754Z",
+    "last_attempt": "2026-05-06T12:36:52.884Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.boulanger.com": {
     "last_status": 400,
-    "last_attempt": "2026-05-06T10:54:37.056Z",
+    "last_attempt": "2026-05-06T12:36:57.648Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.digit-photo.com": {
     "last_status": 200,
-    "last_attempt": "2026-05-06T10:54:41.791Z",
+    "last_attempt": "2026-05-06T12:37:24.567Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.missnumerique.com": {
     "last_status": 200,
-    "last_attempt": "2026-05-06T10:54:47.506Z",
+    "last_attempt": "2026-05-06T12:37:30.817Z",
+    "consecutive_fails": 0,
+    "preferred_method": "json-ld"
+  },
+  "store.canon.fr": {
+    "last_status": 403,
+    "last_attempt": "2026-05-06T12:37:03.126Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.canon.fr": {
+    "last_status": 403,
+    "last_attempt": "2026-05-06T12:37:09.111Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.pixmania.com": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T12:37:14.304Z",
     "consecutive_fails": 0,
     "preferred_method": "json-ld"
   }

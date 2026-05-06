@@ -36,13 +36,15 @@ const sourceLabel = (s) => ({
 // ── PRICE SANITY (G7X Mark III is €600-€1500 typical; tolerate €400-€2500) ─
 // Heuristic-source prices outside this range are almost certainly review-counts,
 // related-product prices, or unrelated numbers grabbed from the page.
+// JSON-LD/meta-tag below €300 is also suspicious — likely a different product
+// or accessory matched the structured-data block.
 const SANE_MIN = 400;
 const SANE_MAX = 2500;
 const looksSane = (n, source) => {
   if (n == null) return false;
   if (source === 'json-ld' || source === 'meta-tag' || source === 'custom-selector') {
-    // Trust structured data but still drop obvious junk
-    return n >= 100 && n <= 5000;
+    // Structured data but still verify it's plausibly THE camera
+    return n >= 300 && n <= 3000;
   }
   // Heuristic: be strict
   return n >= SANE_MIN && n <= SANE_MAX;

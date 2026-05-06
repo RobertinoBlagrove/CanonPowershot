@@ -62,7 +62,10 @@
   {"shop":"Amazon.fr (Silver)","country":"FR","url":"https://www.amazon.fr/dp/B07V7Y1813","type":"marketplace","variant_label":"Silver body","first_seen":"2026-05-06","scrape_hints":{},"ships_to":["NL","BE","DE","FR"]},
   {"shop":"FNAC France (Black)","country":"FR","url":"https://www.fnac.com/Canon-PowerShot-G7X-Mark-III-Noir-Appareil-photo-numerique/a13657091","type":"retail-electronics","variant_label":"Black body","first_seen":"2026-05-06","scrape_hints":{}},
   {"shop":"Darty","country":"FR","url":"https://www.darty.com/nav/recherche.html?text=Canon+PowerShot+G7X+Mark+III","type":"retail-electronics","variant_label":"search","first_seen":"2026-05-06","scrape_hints":{}},
-  {"shop":"Boulanger","country":"FR","url":"https://www.boulanger.com/c/recherche?tr=canon+powershot+g7x+mark+iii","type":"retail-electronics","variant_label":"search","first_seen":"2026-05-06","scrape_hints":{}},
+  {"shop":"Boulanger (Black)","country":"FR","url":"https://www.boulanger.com/ref/1129853","type":"retail-electronics","variant_label":"Black body","first_seen":"2026-05-06","scrape_hints":{}},
+  {"shop":"Canon France Store (Black)","country":"FR","url":"https://store.canon.fr/canon-appareil-photo-compact-canon-powershot-g7-x-mark-iii-noir/3637C011/","type":"manufacturer","variant_label":"Black body","first_seen":"2026-05-06","scrape_hints":{}},
+  {"shop":"Canon France Store (Silver)","country":"FR","url":"https://www.canon.fr/store/canon-appareil-photo-compact-canon-powershot-g7-x-mark-iii-argent/3638C002/","type":"manufacturer","variant_label":"Silver body","first_seen":"2026-05-06","scrape_hints":{}},
+  {"shop":"Pixmania.fr","country":"FR","url":"https://www.pixmania.com/fr/fr/appareil-photo-numerique-compact-canon-powershot-g7x-mark-iii-noir-174853.html","type":"marketplace","variant_label":"Black body","first_seen":"2026-05-06","scrape_hints":{}},
   {"shop":"Digit-Photo","country":"FR","url":"https://www.digit-photo.com/CANON-PowerShot-G7X-Mark-III-Noir-rEAN4549292137903.html","type":"fotospeciaalzaak","variant_label":"Black body","first_seen":"2026-05-06","scrape_hints":{}},
   {"shop":"Miss Numérique","country":"FR","url":"https://www.missnumerique.com/canon-powershot-g7-x-mark-iii-noir-p-15793.html","type":"fotospeciaalzaak","variant_label":"Black body","first_seen":"2026-05-06","scrape_hints":{}}
 ]

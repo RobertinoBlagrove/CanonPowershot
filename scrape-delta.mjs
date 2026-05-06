@@ -97,10 +97,21 @@ for (const t of todo) {
         if (m?.content) { out.price = m.content; out.source = 'meta-tag'; }
       }
       if (!out.price) {
+        // STRIKT: vereis € symbool OF expliciet decimaal-formaat (XXX,XX of X.XXX,XX)
         const all = [...document.querySelectorAll('span, div, p, strong, b')];
         const candidates = all.filter(el => el.children.length === 0)
           .map(el => (el.textContent || '').trim())
-          .filter(t => /^€?\s?\d{2,4}([,.]\d{2})?\s?€?$/.test(t) && t.length < 20).slice(0, 5);
+          .filter(t => t.length < 20)
+          .filter(t => {
+            const hasEuro = t.includes('€');
+            const hasDecimal = /\d[,.]\d{2}\b/.test(t);
+            if (!hasEuro && !hasDecimal) return false;
+            const m = t.match(/(\d{1,2}[.\s]\d{3}|\d{3,4})([,.]\d{2})?/);
+            if (!m) return false;
+            const intPart = parseInt(m[1].replace(/[.\s]/g, ''));
+            return intPart >= 200 && intPart <= 9999;
+          })
+          .slice(0, 5);
         if (candidates.length) { out.price = candidates[0]; out.source = 'heuristic'; }
       }
 
