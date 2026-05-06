@@ -70,7 +70,9 @@ const enriched = results.map(r => {
     stock_icon: stockIcon(stockTrust),
     source_label: sourceLabel(r.source) + (amazonFlaky ? ' (Amazon-heuristiek, niet vertrouwd)' : ''),
     bot_blocked: isAmazonUrl(r.url) && (r.source === 'heuristic' || r.source === null),
-    valid_for_summary: r.verified_mark_iii !== false && r.variant !== 'refurbished'
+    // Variant flag onbetrouwbaar voor existing data (regex op body text); URL-context is sterker
+    // Voor nu: alleen op verified_mark_iii vertrouwen voor summary-inclusion
+    valid_for_summary: r.verified_mark_iii !== false
   };
 });
 

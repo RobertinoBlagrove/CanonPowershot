@@ -207,9 +207,9 @@ for (const t of registry) {
         /G7\s*X\s*(Mark\s*)?III\b|G7X\s*III\b|PowerShot G7 X III/i.test(fullText) &&
         !/\bMark\s*II\b(?!I)|\bMark\s*IV\b/i.test(fullText.slice(0, 2000));
 
-      // KIT/BODY/REFURB
-      const variantText = ((out.title || '') + ' ' + fullText.slice(0, 800)).toLowerCase();
-      out.variant = /refurb|gereviseerd|generalüberholt|gebraucht|tweedehands|used/i.test(variantText) ? 'refurbished' :
+      // KIT/BODY/REFURB — alleen op TITLE checken, anders vangen we sidebar/nav
+      const variantText = (out.title || '').toLowerCase();
+      out.variant = /refurb|gereviseerd|generalüberholt|gebraucht|tweedehands|\bused\b/i.test(variantText) ? 'refurbished' :
                     /\bkit\b|met (lens|tas)|vlogger|vlogkit|streaming kit/i.test(variantText) ? 'kit' :
                     'body';
 

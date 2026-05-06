@@ -155,8 +155,8 @@ for (const t of todo) {
       const fullText = document.body.innerText.slice(0, 30000);
       out.verified_mark_iii = /G7\s*X\s*(Mark\s*)?III\b|G7X\s*III\b|PowerShot G7 X III/i.test(fullText) &&
                               !/\bMark\s*II\b(?!I)|\bMark\s*IV\b/i.test(fullText.slice(0, 2000));
-      const variantText = ((out.title || '') + ' ' + fullText.slice(0, 800)).toLowerCase();
-      out.variant = /refurb|gereviseerd|generalüberholt|gebraucht|tweedehands|used|reconditionné/i.test(variantText) ? 'refurbished' :
+      const variantText = (out.title || '').toLowerCase();
+      out.variant = /refurb|gereviseerd|generalüberholt|gebraucht|tweedehands|\bused\b|reconditionné/i.test(variantText) ? 'refurbished' :
                     /\bkit\b|met (lens|tas)|vlogger|vlogkit|streaming kit/i.test(variantText) ? 'kit' : 'body';
       const dm = fullText.match(
         /(morgen in huis|vandaag verzonden|verzonden binnen \d+ \w+|levertijd[:\s]+[^\n.]{1,40}|lieferung[:\s]+[^\n.]{1,40}|delivery[:\s]+[^\n.]{1,40}|sofort lieferbar|in \d+ werk(dag|tag)en?|livraison sous \d+ \w+|expédié sous \d+ \w+)/i
