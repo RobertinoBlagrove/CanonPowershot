@@ -1,0 +1,170 @@
+{
+  "www.fotokonijnenberg.nl": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:22:00.486Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.coolblue.nl": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:22:18.033Z",
+    "consecutive_fails": 0,
+    "preferred_method": "json-ld"
+  },
+  "www.cameranu.nl": {
+    "last_status": 403,
+    "last_attempt": "2026-05-06T10:22:33.984Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.mediamarkt.nl": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:22:52.530Z",
+    "consecutive_fails": 0,
+    "preferred_method": "heuristic"
+  },
+  "www.amazon.nl": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:23:05.917Z",
+    "consecutive_fails": 0,
+    "preferred_method": "heuristic"
+  },
+  "www.bol.com": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:26:06.031Z",
+    "consecutive_fails": 0,
+    "preferred_method": "heuristic"
+  },
+  "www.bcc.nl": {
+    "last_status": 404,
+    "last_attempt": "2026-05-06T10:23:24.879Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.kamera-express.nl": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:23:47.490Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.fotodevakman.nl": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:24:23.969Z",
+    "consecutive_fails": 0,
+    "preferred_method": "json-ld"
+  },
+  "www.canon.nl": {
+    "last_status": 403,
+    "last_attempt": "2026-05-06T10:24:33.767Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.neboweb.nl": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:24:38.596Z",
+    "consecutive_fails": 0,
+    "preferred_method": "json-ld"
+  },
+  "melskensvenray.nl": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:24:46.135Z",
+    "consecutive_fails": 0,
+    "preferred_method": "json-ld"
+  },
+  "www.mediamarkt.be": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:24:53.231Z",
+    "consecutive_fails": 0,
+    "preferred_method": "heuristic"
+  },
+  "www.coolblue.be": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:25:13.735Z",
+    "consecutive_fails": 0,
+    "preferred_method": "json-ld"
+  },
+  "www.vandenborre.be": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:25:42.441Z",
+    "consecutive_fails": 0,
+    "preferred_method": "heuristic"
+  },
+  "www.krefel.be": {
+    "last_status": 500,
+    "last_attempt": "2026-05-06T10:25:54.163Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.amazon.com.be": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:26:12.082Z",
+    "consecutive_fails": 0,
+    "preferred_method": "heuristic"
+  },
+  "www.nl.fnac.be": {
+    "last_status": 403,
+    "last_attempt": "2026-05-06T10:26:27.142Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.saturn.de": {
+    "last_status": 403,
+    "last_attempt": "2026-05-06T10:26:43.444Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.mediamarkt.de": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:27:02.568Z",
+    "consecutive_fails": 0,
+    "preferred_method": "heuristic"
+  },
+  "www.amazon.de": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:27:18.919Z",
+    "consecutive_fails": 0,
+    "preferred_method": "heuristic"
+  },
+  "www.foto-erhardt.de": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:27:26.355Z",
+    "consecutive_fails": 0,
+    "preferred_method": "heuristic"
+  },
+  "www.fotokoch.de": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:27:39.439Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.calumetphoto.de": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:27:53.757Z",
+    "consecutive_fails": 0,
+    "preferred_method": "json-ld"
+  },
+  "www.foto-mundus.de": {
+    "last_status": 404,
+    "last_attempt": "2026-05-06T10:28:06.679Z",
+    "consecutive_fails": 0,
+    "preferred_method": "heuristic"
+  },
+  "www.fotomeyer.de": {
+    "last_status": 200,
+    "last_attempt": "2026-05-06T10:28:12.958Z",
+    "consecutive_fails": 0,
+    "preferred_method": "meta-tag"
+  },
+  "www.fotobrenner.de": {
+    "last_status": 404,
+    "last_attempt": "2026-05-06T10:28:25.296Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.canon.de": {
+    "last_status": 403,
+    "last_attempt": "2026-05-06T10:28:36.415Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  }
+}

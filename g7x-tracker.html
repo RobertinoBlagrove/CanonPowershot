@@ -2,309 +2,677 @@
 <html lang="nl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Canon PowerShot G7 X Mark III — Tracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta name="last-updated" content="2026-05-06T10:29:26.283Z">
+<title>Canon G7X Tracker — 2026-05-06 10:29 UTC</title>
 <style>
-  :root {
-    color-scheme: light dark;
-    --bg: #fafafa;
-    --fg: #1a1a1a;
-    --muted: #666;
-    --border: #e5e5e5;
-    --table-bg: #fff;
-    --row-alt: #f5f5f5;
-    --link: #0366d6;
-    --warn-bg: #fff8e1;
-    --warn-border: #ffd54f;
-    --green: #1f8a3b;
-    --red: #c8302c;
-    --gray: #777;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0e0e10;
-      --fg: #e8e8ea;
-      --muted: #a0a0a8;
-      --border: #2a2a2d;
-      --table-bg: #161618;
-      --row-alt: #1c1c20;
-      --link: #6cb6ff;
-      --warn-bg: #322a08;
-      --warn-border: #8a6d0e;
-      --green: #4ade80;
-      --red: #f87171;
-      --gray: #9aa0a6;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--fg);
-    margin: 0;
-    line-height: 1.55;
-  }
-  .wrap { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1.25rem 4rem; }
-  h1 { font-size: 1.7rem; margin: 0 0 0.25rem; }
-  h2 { font-size: 1.25rem; margin: 2rem 0 0.6rem; padding-top: 0.6rem; border-top: 1px solid var(--border); }
-  .meta { color: var(--muted); font-size: 0.9rem; margin: 0 0 1.25rem; }
-  .meta a { color: var(--link); }
-  .notice {
-    background: var(--warn-bg);
-    border: 1px solid var(--warn-border);
-    border-radius: 8px;
-    padding: 0.85rem 1rem;
-    margin: 0 0 1.5rem;
-    font-size: 0.92rem;
-  }
-  .summary {
-    background: var(--table-bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1rem 1.15rem;
-    margin: 0 0 1.5rem;
-  }
-  .summary ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
-  .summary li { margin: 0.15rem 0; }
-  .country-section { margin-top: 0.5rem; }
-  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--table-bg); }
-  table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
-  th, td { padding: 0.55rem 0.7rem; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
-  th { background: var(--row-alt); font-weight: 600; cursor: pointer; user-select: none; white-space: nowrap; }
-  th[data-sort]:after { content: " ⇅"; color: var(--muted); font-size: 0.75rem; }
-  th.sort-asc:after { content: " ↑"; color: var(--fg); }
-  th.sort-desc:after { content: " ↓"; color: var(--fg); }
-  tr:nth-child(even) td { background: var(--row-alt); }
-  td.price { white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; }
-  td.link a { color: var(--link); text-decoration: none; }
-  td.link a:hover { text-decoration: underline; }
-  .badge { display: inline-block; padding: 0.12rem 0.5rem; border-radius: 999px; font-size: 0.78rem; font-weight: 600; line-height: 1.4; white-space: nowrap; }
-  .badge.in   { background: rgba(31,138,59,0.15); color: var(--green); border: 1px solid rgba(31,138,59,0.35); }
-  .badge.out  { background: rgba(200,48,44,0.15); color: var(--red); border: 1px solid rgba(200,48,44,0.35); }
-  .badge.unk  { background: rgba(120,120,120,0.15); color: var(--gray); border: 1px solid rgba(120,120,120,0.35); }
-  .new-tag { color: var(--link); font-weight: 600; font-size: 0.75rem; margin-left: 0.25rem; }
-  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
-  footer a { color: var(--link); }
-  code { background: rgba(127,127,127,0.18); padding: 0.05rem 0.35rem; border-radius: 3px; font-size: 0.88em; }
-  @media (max-width: 640px) {
-    table { font-size: 0.85rem; }
-    th, td { padding: 0.45rem 0.5rem; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+         margin: 0; padding: 0; background: #f7f7f8; color: #111; }
+  header { background: #111; color: #fff; padding: 24px 32px; }
+  h1 { margin: 0 0 4px 0; font-size: 24px; font-weight: 600; }
+  header .sub { color: #aaa; font-size: 14px; }
+  main { max-width: 1280px; margin: 0 auto; padding: 24px 32px; }
+  .freshness { background: #fff; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px;
+               box-shadow: 0 1px 3px rgba(0,0,0,0.08); display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .freshness .ts { font-size: 14px; color: #555; }
+  .age-badge { padding: 6px 14px; border-radius: 999px; font-weight: 600; font-size: 14px; display: inline-block; }
+  .age-badge.fresh { background: #d1fae5; color: #065f46; }
+  .age-badge.aging { background: #fef3c7; color: #92400e; }
+  .age-badge.stale { background: #fee2e2; color: #991b1b; }
+  .stale-warn { color: #991b1b; font-size: 13px; margin-top: 8px; flex-basis: 100%; display: none; }
+  .age-badge.stale ~ .stale-warn { display: block; }
+  .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 32px; }
+  .stat { background: #fff; padding: 18px 20px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .stat .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; }
+  .stat .value { font-size: 22px; font-weight: 600; margin-top: 4px; }
+  .stat .sub { font-size: 13px; color: #666; margin-top: 4px; }
+  .filters { margin-bottom: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .filters button { background: #fff; border: 1px solid #ddd; padding: 6px 14px; border-radius: 999px;
+                    font-size: 13px; cursor: pointer; }
+  .filters button.active { background: #111; color: #fff; border-color: #111; }
+  h2.country { margin-top: 28px; font-size: 18px; }
+  table.shops { width: 100%; background: #fff; border-collapse: collapse; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border-radius: 8px; overflow: hidden; }
+  table.shops th { text-align: left; padding: 10px 12px; background: #fafafa; font-weight: 600; font-size: 12px;
+                   text-transform: uppercase; color: #555; border-bottom: 1px solid #eee; cursor: pointer; user-select: none; }
+  table.shops td { padding: 10px 12px; border-bottom: 1px solid #f2f2f2; font-size: 14px; vertical-align: middle; }
+  table.shops td.price { font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+  table.shops tr:hover td { background: #fafafa; }
+  table.shops tr[data-stock="hidden"] { display: none; }
+  .badge { padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; display: inline-block; }
+  .badge.stock-in { background: #d1fae5; color: #065f46; }
+  .badge.stock-out { background: #fee2e2; color: #991b1b; }
+  .badge.stock-unknown { background: #f3f4f6; color: #555; }
+  .badge.src-direct { background: #dbeafe; color: #1e40af; }
+  .badge.src-heuristic { background: #fef3c7; color: #92400e; }
+  .badge.src-other { background: #f3f4f6; color: #555; }
+  footer { margin-top: 48px; padding: 24px 32px; background: #111; color: #aaa; font-size: 13px; }
+  footer a { color: #ddd; }
+  @media (max-width: 768px) {
+    main { padding: 16px; }
+    table.shops { font-size: 12px; }
+    table.shops td, table.shops th { padding: 6px 8px; }
   }
 </style>
 </head>
 <body>
-<div class="wrap">
+<header>
   <h1>Canon PowerShot G7 X Mark III — Tracker</h1>
-  <div class="meta">
-    Laatst bijgewerkt: <strong>2026-05-05 20:59 UTC</strong> ·
-    Live: <a href="https://robertinoblagrove.github.io/CanonPowershot/">robertinoblagrove.github.io/CanonPowershot</a>
+  <div class="sub">Voorraad &amp; prijs in NL · BE · DE · auto-update via Mac mini /loop</div>
+</header>
+
+<main>
+  <div class="freshness">
+    <div>
+      <div class="ts"><strong>Run-tijd:</strong> 6 mei 2026 om 12:29 (Europe/Amsterdam) · <code>2026-05-06 10:29 UTC</code></div>
+    </div>
+    <div>
+      <span class="age-badge fresh" id="age-indicator">net bijgewerkt</span>
+    </div>
+    <div class="stale-warn">⚠️ De Mac mini heeft deze pagina al meer dan 72 uur niet ververst. Check of de /loop nog draait.</div>
   </div>
 
-  <div class="notice">
-    <strong>⚠️ Eerste run, beperkte zekerheid.</strong>
-    WebFetch werd door vrijwel alle webshops geweigerd (HTTP 403). Cellen tonen alleen waarden
-    die <em>letterlijk in publieke zoekresultaat-snippets</em> stonden; al het overige is bewust
-    <span class="badge unk">❓</span> gelaten — niet geraden. Klik altijd door naar de productpagina
-    voor de actuele status.
+  <section class="summary">
+    <div class="stat"><div class="label">Totaal winkels</div><div class="value">56</div></div>
+    <div class="stat"><div class="label">Hard op voorraad ✅</div><div class="value">10</div><div class="sub">directe scrape met prijs + voorraad</div></div>
+    <div class="stat"><div class="label">Uit voorraad ❌</div><div class="value">15</div></div>
+    <div class="stat"><div class="label">Niet vaststelbaar ❓</div><div class="value">20</div></div>
+    <div class="stat"><div class="label">Goedkoopste op voorraad</div>
+      <div class="value">€789,00</div>
+      <div class="sub">Amazon DE (Black)</div>
+    </div>
+  </section>
+
+  <div class="filters">
+    <button class="active" data-filter="all">Alle</button>
+    <button data-filter="in_stock">Alleen op voorraad ✅</button>
+    <button data-filter="body">Alleen body</button>
   </div>
 
-  <div class="summary">
-    <strong>Samenvatting</strong>
-    <ul>
-      <li><strong>Totaal winkels gecheckt:</strong> 38</li>
-      <li><strong>Op voorraad ✅</strong> (expliciet bevestigd in snippet): <strong>3</strong></li>
-      <li><strong>Uit voorraad ❌</strong> (expliciet bevestigd in snippet): <strong>6</strong></li>
-      <li><strong>Onbekend ❓</strong> (geen harde bevestiging): <strong>29</strong></li>
-      <li><strong>Goedkoopste met bevestigde prijs én bevestigde voorraad (overall)</strong>:
-        MediaMarkt NL — <strong>€879,00</strong> (Black body) ·
-        <a href="https://www.mediamarkt.nl/nl/product/_canon-powershot-g7-x-mark-iii-zwart-1627632.html" target="_blank" rel="noopener">link</a>
-      </li>
-      <li><strong>Goedkoopste bevestigd in NL</strong>: MediaMarkt NL — €879,00 (Black body) <span class="badge in">✅</span></li>
-      <li><strong>Goedkoopste bevestigd in BE</strong>: MediaMarkt BE — €899,99 (Black Vlog Kit) <span class="badge in">✅</span></li>
-      <li><strong>Goedkoopste bevestigd in DE</strong>: ❓ — geen DE-shop gaf in snippets prijs én expliciete voorraad.
-        Geizhals-vergelijker noemt vanaf <strong>€848,00</strong> (Black) maar dat is een aggregaat, niet één shop.</li>
-    </ul>
-    <p style="margin: 0.7rem 0 0; font-size: 0.88rem; color: var(--muted);">
-      Let op: Foto Konijnenberg toont <strong>€719,00 (Silver)</strong> in een snippet — aanzienlijk lager dan de andere aanbieders, maar voorraad daar is niet expliciet bevestigd.
-    </p>
-  </div>
+  <h2 class="country">🇳🇱 Nederland (23)</h2>
+  <table class="shops">
+    <thead><tr><th data-sort="shop">Winkel</th><th data-sort="price">Prijs</th><th data-sort="stock">Voorraad</th><th>Levertijd</th><th>Variant</th><th>Bron</th><th>Link</th></tr></thead><tbody><tr data-stock="out_of_stock" data-variant="body" data-price="729">
+      <td>Coolblue NL (Silver)</td>
+      <td class="price">€729,00</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.coolblue.nl/product/834936/canon-powershot-g7-x-mark-iii-zilver.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="body" data-price="841.64">
+      <td>Amazon NL (Black)</td>
+      <td class="price">€841,64</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>verzonden binnen 6 tot</td>
+      <td>Black body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.amazon.nl/Canon-PowerShot-Mark-Schwarz-Digitalkamera/dp/B07V3NBJC3" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="body" data-price="879">
+      <td>MediaMarkt NL (Black)</td>
+      <td class="price">€879,00</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>morgen in huis</td>
+      <td>Black body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.mediamarkt.nl/nl/product/_canon-powershot-g7-x-mark-iii-zwart-1627632.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="body" data-price="924">
+      <td>Bol.com NL (Black)</td>
+      <td class="price">€924,00</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>Morgen in huis</td>
+      <td>Black body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.bol.com/nl/p/canon-powershot-g7x-mark-iii-zwart/9200000116339872/" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="kit" data-price="959">
+      <td>MediaMarkt NL (Vlogkit)</td>
+      <td class="price">€959,00</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>morgen in huis</td>
+      <td>Black Vlogkit</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.mediamarkt.nl/nl/product/_canon-powershot-g7x-mark-iii-vlogger-kit-1653464.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="refurbished" data-price="969">
+      <td>NEBO</td>
+      <td class="price">€969,00</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.neboweb.nl/canon-powershot-g7x-mark-iii-zwart" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="body" data-price="999">
+      <td>Coolblue NL (body)</td>
+      <td class="price">€999,00</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.coolblue.nl/product/834935/canon-powershot-g7-x-mark-iii-zwart.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="body" data-price="999">
+      <td>Foto Dom Melskens</td>
+      <td class="price">€999,00</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>levertijd
 
-  <h2>🇳🇱 Nederland</h2>
-  <div class="country-section"><div class="table-wrap"><table data-sortable>
-    <thead><tr>
-      <th data-sort="text">Winkel</th>
-      <th data-sort="price">Prijs</th>
-      <th data-sort="text">Voorraad</th>
-      <th data-sort="text">Levertijd</th>
-      <th data-sort="text">Variant</th>
-      <th>Link</th>
-    </tr></thead>
-    <tbody>
-      <tr><td>Foto Konijnenberg</td><td class="price">€719,00</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Silver body</td><td class="link"><a href="https://www.fotokonijnenberg.nl/canon-powershot-g7x-mark-iii-silver" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Coolblue NL (body)</td><td class="price">€799,00</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black body</td><td class="link"><a href="https://www.coolblue.nl/product/834935/canon-powershot-g7-x-mark-iii-zwart.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Coolblue NL (Vlogkit)</td><td class="price">€1.099,00</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black Vlogkit</td><td class="link"><a href="https://www.coolblue.nl/product/859230/canon-g7-x-mark-iii-zwart-vlogkit.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Coolblue NL (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Silver body</td><td class="link"><a href="https://www.coolblue.nl/product/834936/canon-powershot-g7-x-mark-iii-zilver.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Cameranu (Black)</td><td class="price">€879,00</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black body</td><td class="link"><a href="https://www.cameranu.nl/p3037965/canon-powershot-g7-x-mark-iii-compact-camera-zwart" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Cameranu (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Silver body</td><td class="link"><a href="https://www.cameranu.nl/p3037975/canon-powershot-g7-x-mark-iii-compact-camera-zilver" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>MediaMarkt NL (Black)</td><td class="price">€879,00</td><td><span class="badge in">✅</span></td><td>gratis verzending vanaf €50</td><td>Black body</td><td class="link"><a href="https://www.mediamarkt.nl/nl/product/_canon-powershot-g7-x-mark-iii-zwart-1627632.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>MediaMarkt NL (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Silver body</td><td class="link"><a href="https://www.mediamarkt.nl/nl/product/_canon-powershot-g7-x-mark-iii-zilver-1627633.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>MediaMarkt NL (Vlogkit)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black Vlogkit</td><td class="link"><a href="https://www.mediamarkt.nl/nl/product/_canon-powershot-g7x-mark-iii-vlogger-kit-1653464.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Amazon NL (Black)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓ (BC GmbH 3rd-party)</td><td>Black body</td><td class="link"><a href="https://www.amazon.nl/Canon-PowerShot-Mark-Schwarz-Digitalkamera/dp/B07V3NBJC3" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Amazon NL (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Silver body</td><td class="link"><a href="https://www.amazon.nl/-/en/Canon-PowerShot-Mark-foldable-silver/dp/B07V7Y1813" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Bol.com NL (Black)</td><td class="price">€699 – €746,85</td><td><span class="badge unk">❓</span></td><td>❓ (3rd-party)</td><td>Black body</td><td class="link"><a href="https://www.bol.com/nl/p/canon-powershot-g7x-mark-iii-zwart/9200000116339872/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Bol.com NL (Vlogkit)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black Vlogkit</td><td class="link"><a href="https://www.bol.com/nl/nl/p/canon-powershot-g7x-mark-iii-vlogkit-zwart/9200000129130765/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>BCC.nl (Silver)</td><td class="price">❓</td><td><span class="badge in">✅</span></td><td>❓</td><td>Silver body</td><td class="link"><a href="https://www.bcc.nl/vrije-tijd/digitale-camera/compact-camera/canon-compact-camera-powershot-g7x-mark-iii-zilver/269831" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>BCC.nl (Black)</td><td class="price">❓</td><td><span class="badge out">❌</span> overal uitverkocht</td><td>—</td><td>Black body</td><td class="link"><a href="https://www.bcc.nl/product/canon-powershot-g7-x-mark-iii-zwart" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Kamera Express NL (Black)</td><td class="price">€999,00</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black body</td><td class="link"><a href="https://www.kamera-express.nl/canon-powershot-g7x-mark-iii-zwart" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Kamera Express NL (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Silver body</td><td class="link"><a href="https://www.kamera-express.nl/canon-g7x-mark-iii-silver" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Kamera Express NL (30th Anniv)</td><td class="price">€899,00</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Graphite limited</td><td class="link"><a href="https://www.kamera-express.nl/canon-g7xiii-30th-anniversary-edition" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Kamera Express NL (Vlogkit)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black Vlogkit</td><td class="link"><a href="https://www.kamera-express.nl/canon-powershot-g7x-mark-iii-vlogger-kit-zw" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Foto de Vakman (Black)</td><td class="price">❓</td><td><span class="badge in">✅</span> directly available 24/7</td><td>❓</td><td>Black body</td><td class="link"><a href="https://www.fotodevakman.nl/canon-powershot-g7x-mark-iii-black" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Foto de Vakman (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Silver body</td><td class="link"><a href="https://www.fotodevakman.nl/canon-powershot-g7x-mark-iii-silver" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Canon NL Store (Black) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>gratis verzending vanaf €30</td><td>Black body</td><td class="link"><a href="https://www.canon.nl/store/canon-powershot-g7-x-mark-iii-compactcamera-zwart/3637C002/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Canon NL Store (Silver) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>gratis verzending vanaf €30</td><td>Silver body</td><td class="link"><a href="https://www.canon.nl/store/canon-powershot-g7-x-mark-iii-compactcamera-zilver/3638C002/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Canon NL Store (Vlogkit) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black Vlogkit</td><td class="link"><a href="https://www.canon.nl/store/canon-powershot-g7-x-mark-iii-premium-vloggerkit-zwart/3637C027/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>NEBO <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black body</td><td class="link"><a href="https://www.neboweb.nl/canon-powershot-g7x-mark-iii-zwart" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Digimaxx (Silver) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge out">❌</span> tijdelijk uitverkocht</td><td>—</td><td>Silver body</td><td class="link"><a href="https://www.digimaxx.nl/shop/canon-powershot-g7x-mark-iii-occasion-12-maanden-garantie-detail/notify" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Foto Dom Melskens <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span> ("Nu Leverbaar" claim)</td><td>❓</td><td>Body</td><td class="link"><a href="https://melskensvenray.nl/product/canon-powershot-g7x-mkiii/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Cameraland (used) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Used Silver</td><td class="link"><a href="https://www.cameraland.nl/tweedehands-canon-powershot-g7x-mark-iii-zilver-cm6154" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>FotoHuis</td><td class="price">—</td><td><span class="badge unk">❓</span> onbereikbaar / niet gevonden</td><td>—</td><td>—</td><td class="link"><a href="https://www.fotohuis.nl/" target="_blank" rel="noopener">homepage</a></td></tr>
-      <tr><td>CameraTools</td><td class="price">—</td><td><span class="badge unk">❓</span> niet als product gevonden</td><td>—</td><td>—</td><td class="link"><a href="https://www.cameratools.nl/" target="_blank" rel="noopener">homepage</a></td></tr>
-      <tr><td>Calumet Photo NL</td><td class="price">—</td><td><span class="badge unk">❓</span> niet als product gevonden</td><td>—</td><td>—</td><td class="link"><a href="https://www.calumetphoto.nl/" target="_blank" rel="noopener">homepage</a></td></tr>
-      <tr><td>Fotovakhandel.nl</td><td class="price">—</td><td><span class="badge unk">❓</span> niet als product gevonden</td><td>—</td><td>—</td><td class="link"><a href="https://www.fotovakhandel.nl/" target="_blank" rel="noopener">homepage</a></td></tr>
-      <tr><td>Foka.nl</td><td class="price">—</td><td><span class="badge out">❌</span> opgegaan in Kamera Express</td><td>—</td><td>—</td><td class="link"><a href="https://www.foka.nl/" target="_blank" rel="noopener">redirect</a></td></tr>
-      <tr><td>Tweakers Pricewatch</td><td class="price">—</td><td>(vergelijker)</td><td>—</td><td>—</td><td class="link"><a href="https://tweakers.net/pricewatch/" target="_blank" rel="noopener">overzicht</a></td></tr>
-      <tr><td>Beslist.nl</td><td class="price">—</td><td>(vergelijker)</td><td>—</td><td>—</td><td class="link"><a href="https://www.beslist.nl/" target="_blank" rel="noopener">homepage</a></td></tr>
-      <tr><td>Cameradeals.nl <span class="new-tag">⭐ nieuw</span></td><td class="price">—</td><td>(vergelijker)</td><td>—</td><td>—</td><td class="link"><a href="https://www.cameradeals.nl/product/canon-powershot-g7-x-mark-iii-zwart/" target="_blank" rel="noopener">pricewatch</a></td></tr>
-    </tbody>
-  </table></div></div>
+Wees er snel bij, slechts 1 exemplaar op</td>
+      <td>Body</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://melskensvenray.nl/product/canon-powershot-g7x-mkiii/" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="body" data-price="1019">
+      <td>Foto de Vakman (Silver)</td>
+      <td class="price">€1019,00</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>Delivery	Ja</td>
+      <td>Silver body</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.fotodevakman.nl/canon-powershot-g7x-mark-iii-silver" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="kit" data-price="1099">
+      <td>Coolblue NL (Vlogkit)</td>
+      <td class="price">€1099,00</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>—</td>
+      <td>Black Vlogkit</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.coolblue.nl/product/859230/canon-g7-x-mark-iii-zwart-vlogkit.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="refurbished" data-price="1099">
+      <td>Kamera Express NL (Black)</td>
+      <td class="price">€1099,00</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.kamera-express.nl/canon-powershot-g7x-mark-iii-zwart" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="refurbished" data-price="1099">
+      <td>Kamera Express NL (Silver)</td>
+      <td class="price">€1099,00</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.kamera-express.nl/canon-g7x-mark-iii-silver" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="body" data-price="">
+      <td>Amazon NL (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.amazon.nl/-/en/Canon-PowerShot-Mark-foldable-silver/dp/B07V7Y1813" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>BCC.nl (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.bcc.nl/vrije-tijd/digitale-camera/compact-camera/canon-compact-camera-powershot-g7x-mark-iii-zilver/269831" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="kit" data-price="">
+      <td>Bol.com NL (Vlogkit)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>Morgen in huis</td>
+      <td>Black Vlogkit</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.bol.com/nl/nl/p/canon-powershot-g7x-mark-iii-vlogkit-zwart/9200000129130765/" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="kit" data-price="">
+      <td>Cameranu (Black)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>Morgen in huis</td>
+      <td>Black body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.cameranu.nl/p3037965/canon-powershot-g7-x-mark-iii-compact-camera-zwart" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Cameranu (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.cameranu.nl/p3037975/canon-powershot-g7-x-mark-iii-compact-camera-zilver" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Canon NL Store (Black)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.canon.nl/store/canon-powershot-g7-x-mark-iii-compactcamera-zwart/3637C002/" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Canon NL Store (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.canon.nl/store/canon-powershot-g7-x-mark-iii-compactcamera-zilver/3638C002/" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="undefined" data-variant="" data-price="">
+      <td>Foto de Vakman (Black)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.fotodevakman.nl/canon-powershot-g7x-mark-iii-black" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="refurbished" data-price="">
+      <td>Foto Konijnenberg</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.fotokonijnenberg.nl/canon-powershot-g7x-mark-iii-silver" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="refurbished" data-price="">
+      <td>Kamera Express NL (30th)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>—</td>
+      <td>Graphite limited</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.kamera-express.nl/canon-g7xiii-30th-anniversary-edition" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="body" data-price="">
+      <td>MediaMarkt NL (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>morgen in huis</td>
+      <td>Silver body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.mediamarkt.nl/nl/product/_canon-powershot-g7-x-mark-iii-zilver-1627633.html" target="_blank" rel="noopener">↗</a></td>
+    </tr></tbody></table>
 
-  <h2>🇧🇪 België</h2>
-  <div class="country-section"><div class="table-wrap"><table data-sortable>
-    <thead><tr>
-      <th data-sort="text">Winkel</th>
-      <th data-sort="price">Prijs</th>
-      <th data-sort="text">Voorraad</th>
-      <th data-sort="text">Levertijd</th>
-      <th data-sort="text">Variant</th>
-      <th>Link</th>
-    </tr></thead>
-    <tbody>
-      <tr><td>MediaMarkt BE (Vlog)</td><td class="price">€899,99</td><td><span class="badge in">✅</span></td><td>gratis verzending vanaf €50</td><td>Black Vlogkit</td><td class="link"><a href="https://www.mediamarkt.be/fr/product/_canon-appareil-photo-compact-powershot-g7-x-mark-iii-vlog-black-3637c027aa-1858559.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Coolblue BE (Black body)</td><td class="price">€999,00</td><td><span class="badge out">❌</span> temporarily sold out</td><td>—</td><td>Black body</td><td class="link"><a href="https://www.coolblue.be/en/product/834935/canon-powershot-g7-x-mark-iii-black.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Coolblue BE (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Silver body</td><td class="link"><a href="https://www.coolblue.be/fr/produit/834936/canon-powershot-g7-x-mark-iii-argent.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Coolblue BE (Vlogkit)</td><td class="price">€1.099,00</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black Vlogkit</td><td class="link"><a href="https://www.coolblue.be/fr/produit/859230/canon-g7-x-mark-iii-noir-kit-vlogueur.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Vanden Borre (Black)</td><td class="price">❓</td><td><span class="badge out">❌</span> no longer available</td><td>—</td><td>Black body</td><td class="link"><a href="https://www.vandenborre.be/fototoestel/canon-powershot-g7x-mark-iii-black" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Vanden Borre (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Silver body</td><td class="link"><a href="https://www.vandenborre.be/fototoestel/canon-powershot-g7-x-mark-iii-silver" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Vanden Borre (Battery Kit)</td><td class="price">❓</td><td><span class="badge out">❌</span> not available</td><td>—</td><td>Black Battery Kit</td><td class="link"><a href="https://www.vandenborre.be/fototoestel/canon-powershot-g7x-mark-iii-black-battery-kit" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Krëfel (Silver)</td><td class="price">€799,95</td><td><span class="badge out">❌</span> uit voorraad</td><td>—</td><td>Silver body</td><td class="link"><a href="https://www.krefel.be/fr/p/42000996-powershot-g7-x-mark-iii-argent" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Krëfel (Black)</td><td class="price">€999,00</td><td><span class="badge out">❌</span> uit voorraad</td><td>—</td><td>Black body</td><td class="link"><a href="https://www.krefel.be/fr/p/42000942-powershot-g7-x-mark-iii-noir" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Bol.com BE (Black)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black body</td><td class="link"><a href="https://www.bol.com/be/nl/p/canon-powershot-g7x-mark-iii-zwart/9200000116339872/?country=BE" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Bol.com BE (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Silver body</td><td class="link"><a href="https://www.bol.com/be/nl/p/canon-powershot-g7x-mark-iii-zilver/9200000116339868/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Amazon.com.be</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black body</td><td class="link"><a href="https://www.amazon.com.be/-/nl/Canon-Compact-PowerShot-G7X-Mark/dp/B07V3NBJC3" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>FNAC België <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span> (2-jaar FNAC garantie vermeld)</td><td>❓</td><td>Black body</td><td class="link"><a href="https://www.nl.fnac.be/CANON-G7X-MARK-III-BLACK/a13657090" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>FNAC België (30th Anniv) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Special Edition Black</td><td class="link"><a href="https://www.nl.fnac.be/Compactcamera-Canon-PowerShot-G7X-Mark-III-Special-Editie-30-jaar-Zwart/a22700322" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Canon BE Store (Black) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>gratis verzending vanaf €30</td><td>Black body</td><td class="link"><a href="https://store.canon.be/canon-powershot-g7-x-mark-iii-compactcamera-zwart/3637C011/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Canon BE Store (Silver) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>gratis verzending vanaf €30</td><td>Silver body</td><td class="link"><a href="https://nl.canon.be/store/canon-powershot-g7-x-mark-iii-compactcamera-zilver/3638C002/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Canon BE Store (Vlogkit) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Black Vlogkit</td><td class="link"><a href="https://nl.canon.be/store/canon-powershot-g7-x-mark-iii-premium-vlogkit-zwart/3637C027/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Kamera Express BE</td><td class="price">—</td><td><span class="badge unk">❓</span> onbereikbaar / geen productpage gevonden</td><td>—</td><td>—</td><td class="link"><a href="https://www.kameraexpress.be/" target="_blank" rel="noopener">homepage</a></td></tr>
-      <tr><td>Photo Galerie</td><td class="price">—</td><td><span class="badge unk">❓</span> niet gevonden</td><td>—</td><td>—</td><td class="link"><a href="https://www.photo-galerie.be/" target="_blank" rel="noopener">homepage</a></td></tr>
-      <tr><td>Photo Hall</td><td class="price">—</td><td><span class="badge unk">❓</span> niet gevonden</td><td>—</td><td>—</td><td class="link"><a href="https://www.photohall.be/" target="_blank" rel="noopener">homepage</a></td></tr>
-    </tbody>
-  </table></div></div>
+  <h2 class="country">🇧🇪 België (13)</h2>
+  <table class="shops">
+    <thead><tr><th data-sort="shop">Winkel</th><th data-sort="price">Prijs</th><th data-sort="stock">Voorraad</th><th>Levertijd</th><th>Variant</th><th>Bron</th><th>Link</th></tr></thead><tbody><tr data-stock="out_of_stock" data-variant="body" data-price="729">
+      <td>Coolblue BE (Silver)</td>
+      <td class="price">€729,00</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.coolblue.be/fr/produit/834936/canon-powershot-g7-x-mark-iii-argent.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="body" data-price="924">
+      <td>Bol.com BE (Black)</td>
+      <td class="price">€924,00</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>Morgen in huis</td>
+      <td>Black body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.bol.com/be/nl/p/canon-powershot-g7x-mark-iii-zwart/9200000116339872/?country=BE" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="body" data-price="924">
+      <td>Bol.com BE (Silver)</td>
+      <td class="price">€924,00</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>Morgen in huis</td>
+      <td>Silver body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.bol.com/be/nl/p/canon-powershot-g7x-mark-iii-zilver/9200000116339868/" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="body" data-price="999">
+      <td>Coolblue BE (Black)</td>
+      <td class="price">€999,00</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>Delivery and installation</td>
+      <td>Black body</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.coolblue.be/en/product/834935/canon-powershot-g7-x-mark-iii-black.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="body" data-price="999">
+      <td>Amazon.com.be</td>
+      <td class="price">€999,00</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.amazon.com.be/-/nl/Canon-Compact-PowerShot-G7X-Mark/dp/B07V3NBJC3" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="body" data-price="999">
+      <td>FNAC België (Black)</td>
+      <td class="price">€999,00</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.nl.fnac.be/CANON-G7X-MARK-III-BLACK/a13657090" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="kit" data-price="1099">
+      <td>Coolblue BE (Vlogkit)</td>
+      <td class="price">€1099,00</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>—</td>
+      <td>Black Vlogkit</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.coolblue.be/fr/produit/859230/canon-g7-x-mark-iii-noir-kit-vlogueur.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>FNAC België (30th)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Special Edition</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.nl.fnac.be/Compactcamera-Canon-PowerShot-G7X-Mark-III-Special-Editie-30-jaar-Zwart/a22700322" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Krëfel (Black)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.krefel.be/fr/p/42000942-powershot-g7-x-mark-iii-noir" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Krëfel (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.krefel.be/fr/p/42000996-powershot-g7-x-mark-iii-argent" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>MediaMarkt BE (Vlog)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Black Vlogkit</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.mediamarkt.be/fr/product/_canon-appareil-photo-compact-powershot-g7-x-mark-iii-vlog-black-3637c027aa-1858559.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Vanden Borre (Black)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.vandenborre.be/fototoestel/canon-powershot-g7x-mark-iii-black" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Vanden Borre (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.vandenborre.be/fototoestel/canon-powershot-g7-x-mark-iii-silver" target="_blank" rel="noopener">↗</a></td>
+    </tr></tbody></table>
 
-  <h2>🇩🇪 Duitsland</h2>
-  <div class="country-section"><div class="table-wrap"><table data-sortable>
-    <thead><tr>
-      <th data-sort="text">Winkel</th>
-      <th data-sort="price">Prijs</th>
-      <th data-sort="text">Voorraad</th>
-      <th data-sort="text">Levertijd</th>
-      <th data-sort="text">Variant</th>
-      <th>Link</th>
-    </tr></thead>
-    <tbody>
-      <tr><td>Geizhals laagste (Black, vergelijker)</td><td class="price">vanaf €848,00</td><td>—</td><td>wisselt per shop</td><td>Black body</td><td class="link"><a href="https://geizhals.de/canon-powershot-g7-x-mark-iii-schwarz-3637c002-a2090936.html" target="_blank" rel="noopener">pricewatch</a></td></tr>
-      <tr><td>Geizhals laagste (Silver, vergelijker)</td><td class="price">vanaf €849,00</td><td>—</td><td>wisselt per shop</td><td>Silver body</td><td class="link"><a href="https://geizhals.de/canon-powershot-g7-x-mark-iii-silber-3638c002-a2090941.html" target="_blank" rel="noopener">pricewatch</a></td></tr>
-      <tr><td>Geizhals (Vlogger Kit)</td><td class="price">vanaf €929,00</td><td>—</td><td>wisselt per shop</td><td>Black Vlogkit</td><td class="link"><a href="https://geizhals.de/canon-powershot-g7-x-mark-iii-schwarz-vlogger-kit-3637c027-a3184282.html" target="_blank" rel="noopener">pricewatch</a></td></tr>
-      <tr><td>Geizhals (30th Anniv)</td><td class="price">vanaf €899,00</td><td><span class="badge unk">❓</span></td><td>release 23-04-2026</td><td>Graphite limited</td><td class="link"><a href="https://geizhals.de/canon-powershot-g7-x-mark-iii-30th-anniversary-edition-graphit-7563c002-a3716139.html" target="_blank" rel="noopener">pricewatch</a></td></tr>
-      <tr><td>Saturn DE (Black)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Black body</td><td class="link"><a href="https://www.saturn.de/de/product/_canon-powershot-g7-x-mark-iii-2575217.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Saturn DE (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Silver body</td><td class="link"><a href="https://www.saturn.de/de/product/_canon-powershot-g7-x-mark-iii-2575218.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Saturn DE (Vlogkit)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Black Vlogkit</td><td class="link"><a href="https://www.saturn.de/de/product/_canon-powershot-g7-x-mark-iii-vlogging-kit-2703298.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>MediaMarkt DE (Black)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Black body</td><td class="link"><a href="https://www.mediamarkt.de/de/product/_canon-powershot-g7-x-mark-iii-2575217.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>MediaMarkt DE (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Silver body</td><td class="link"><a href="https://www.mediamarkt.de/de/product/_canon-powershot-g7-x-mark-iii-2575218.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>MediaMarkt DE (Vlog)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Black Vlogkit</td><td class="link"><a href="https://www.mediamarkt.de/de/product/_canon-powershot-g7-x-mark-iii-vlogging-kit-2703298.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Amazon DE (Black)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Black body</td><td class="link"><a href="https://www.amazon.de/Canon-Digitalkamera-LCD-Touchscreen-Blendenautomatik-Zeitautomatik/dp/B07V3NBJC3" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Amazon DE (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Silver body</td><td class="link"><a href="https://www.amazon.de/Canon-Digitalkamera-LCD-Touchscreen-Blendenautomatik-Zeitautomatik/dp/B07V7Y1813" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Foto Erhardt (bundle)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Black + DCC-1880</td><td class="link"><a href="https://www.foto-erhardt.de/kameras/kompaktkameras/canon-powershot/canon-powershot-g7x-mark-iii-schwarzpluscanon-dcc-1880-tasche.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Foto Koch (Black)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>gratis verzending DE (claim)</td><td>Black body</td><td class="link"><a href="https://www.fotokoch.de/Canon-PowerShot-G7X-Mark-III-schwarz_24058.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Foto Koch (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Silver body</td><td class="link"><a href="https://www.fotokoch.de/Canon-PowerShot-G7X-Mark-III-silber_24059.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Calumet DE (Black)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Black body</td><td class="link"><a href="https://www.calumetphoto.de/product/canon-powershot-g7-x-mark-iii-schwarz/cang7xmiiibl" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Calumet DE (Silver)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Silver body</td><td class="link"><a href="https://www.calumetphoto.de/product/canon-powershot-g7-x-mark-iii-silber" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Calumet DE (Vlogger Kit)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>levertijd 1-3 maanden (snippet)</td><td>Black Vlogkit</td><td class="link"><a href="https://www.calumetphoto.de/product/Canon-PowerShot-G7X-Mark-III-Vlogger-Kit/CANG7XMIIIBLVLOGKIT" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Calumet DE (used Black)</td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Used Black</td><td class="link"><a href="https://www.calumetphoto.de/product/Canon-PowerShot-G7-X-Mark-III-schwarz-gebraucht/1SHCANG7XMIIIBL" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Foto Mundus (Black) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Black body</td><td class="link"><a href="https://www.foto-mundus.de/digitalkameras/canon/33065/canon-powershot-g7-x-mark-iii-schwarz" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Foto Mundus (Silver) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Silver body</td><td class="link"><a href="https://www.foto-mundus.de/digitalkameras/canon/33066/canon-powershot-g7-x-mark-iii-silber" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>FotoMeyer <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Black body</td><td class="link"><a href="https://www.fotomeyer.de/canon-powershot-g7-x-mark-iii-77658.html" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Foto Brenner (Silver) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Silver body</td><td class="link"><a href="https://www.fotobrenner.de/canon-powershot-g7-x-iii-silber" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Foto Brenner (Vlogkit) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Black Vlogkit</td><td class="link"><a href="https://www.fotobrenner.de/canon-powershot-g7x-mark-iii-vlogger-kit-schwarz" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Canon DE Store (Black) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>gratis verzending vanaf €30</td><td>Black body</td><td class="link"><a href="https://www.canon.de/store/store/canon-powershot-g7-x-mark-iii-kompaktkamera-schwarz/3637C002/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Canon DE Store (Silver) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>gratis verzending vanaf €30</td><td>Silver body</td><td class="link"><a href="https://www.canon.de/store/store/canon-powershot-g7-x-mark-iii-kompaktkamera-silber/3638C002/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Canon DE Store (30th Anniv) <span class="new-tag">⭐ nieuw</span></td><td class="price">❓</td><td><span class="badge unk">❓</span></td><td>❓</td><td>Graphite limited</td><td class="link"><a href="https://www.canon.de/store/canon-powershot-g7-x-mark-iii-kompaktkamera-graphit-ausgabe-zum-30-jubilaeum/7563C002/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Kaufland DE <span class="new-tag">⭐ nieuw</span></td><td class="price">vanaf €984,50</td><td><span class="badge unk">❓</span></td><td>n/a</td><td>Black body</td><td class="link"><a href="https://www.kaufland.de/product/342887358/" target="_blank" rel="noopener">productpagina</a></td></tr>
-      <tr><td>Cyberport</td><td class="price">—</td><td><span class="badge unk">❓</span> niet gevonden</td><td>—</td><td>—</td><td class="link"><a href="https://www.cyberport.de/" target="_blank" rel="noopener">homepage</a></td></tr>
-      <tr><td>Notebooksbilliger</td><td class="price">—</td><td><span class="badge unk">❓</span> niet gevonden</td><td>—</td><td>—</td><td class="link"><a href="https://www.notebooksbilliger.de/" target="_blank" rel="noopener">homepage</a></td></tr>
-      <tr><td>Computeruniverse</td><td class="price">—</td><td><span class="badge unk">❓</span> niet gevonden</td><td>—</td><td>—</td><td class="link"><a href="https://www.computeruniverse.net/" target="_blank" rel="noopener">homepage</a></td></tr>
-      <tr><td>Foto Walser</td><td class="price">—</td><td><span class="badge unk">❓</span> niet gevonden</td><td>—</td><td>—</td><td class="link"><a href="https://www.foto-walser.de/" target="_blank" rel="noopener">homepage</a></td></tr>
-      <tr><td>Idealo (vergelijker)</td><td class="price">—</td><td>—</td><td>—</td><td>—</td><td class="link"><a href="https://www.idealo.de/preisvergleich/OffersOfProduct/6643970_-powershot-g7x-mark-iii-canon.html" target="_blank" rel="noopener">pricewatch</a></td></tr>
-      <tr><td>Guenstiger.de <span class="new-tag">⭐ nieuw</span></td><td class="price">—</td><td>(vergelijker)</td><td>—</td><td>—</td><td class="link"><a href="https://www.guenstiger.de/Produkt/Canon/PowerShot_G7_X_Mark_III.html" target="_blank" rel="noopener">pricewatch</a></td></tr>
-    </tbody>
-  </table></div></div>
+  <h2 class="country">🇩🇪 Duitsland (20)</h2>
+  <table class="shops">
+    <thead><tr><th data-sort="shop">Winkel</th><th data-sort="price">Prijs</th><th data-sort="stock">Voorraad</th><th>Levertijd</th><th>Variant</th><th>Bron</th><th>Link</th></tr></thead><tbody><tr data-stock="in_stock" data-variant="body" data-price="789">
+      <td>Amazon DE (Black)</td>
+      <td class="price">€789,00</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.amazon.de/Canon-Digitalkamera-LCD-Touchscreen-Blendenautomatik-Zeitautomatik/dp/B07V3NBJC3" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="refurbished" data-price="879">
+      <td>MediaMarkt DE (Vlog)</td>
+      <td class="price">€879,00</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>Lieferung möglich</td>
+      <td>Black Vlogkit</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.mediamarkt.de/de/product/_canon-powershot-g7-x-mark-iii-vlogging-kit-2703298.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="899">
+      <td>Foto Brenner (Silver)</td>
+      <td class="price">€899,00</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>Lieferung - Versandkostenfrei ab 79€ (D)</td>
+      <td>Silver body</td>
+      <td><span class="badge src-direct">direct (meta)</span></td>
+      <td><a href="https://www.fotobrenner.de/canon-powershot-g7-x-iii-silber" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="body" data-price="949">
+      <td>Foto Erhardt (bundle)</td>
+      <td class="price">€949,00</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>Sofort lieferbar</td>
+      <td>Black + bag</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.foto-erhardt.de/kameras/kompaktkameras/canon-powershot/canon-powershot-g7x-mark-iii-schwarzpluscanon-dcc-1880-tasche.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="preorder" data-variant="refurbished" data-price="949">
+      <td>Calumet DE (Black)</td>
+      <td class="price">€949,00</td>
+      <td><span class="badge stock-unknown">🟡</span></td>
+      <td>Lieferung
+Rücksendung</td>
+      <td>Black body</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.calumetphoto.de/product/canon-powershot-g7-x-mark-iii-schwarz/cang7xmiiibl" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="949">
+      <td>FotoMeyer</td>
+      <td class="price">€949,00</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>Lieferung: Ab einem Warenwert von 100 EUR versenden</td>
+      <td>Black body</td>
+      <td><span class="badge src-direct">direct (meta)</span></td>
+      <td><a href="https://www.fotomeyer.de/canon-powershot-g7-x-mark-iii-77658.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="preorder" data-variant="refurbished" data-price="1099">
+      <td>Calumet DE (Silver)</td>
+      <td class="price">€1099,00</td>
+      <td><span class="badge stock-unknown">🟡</span></td>
+      <td>Lieferung
+Rücksendung</td>
+      <td>Silver body</td>
+      <td><span class="badge src-direct">direct (JSON-LD)</span></td>
+      <td><a href="https://www.calumetphoto.de/product/canon-powershot-g7-x-mark-iii-silber" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="in_stock" data-variant="body" data-price="">
+      <td>Amazon DE (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-in">✅</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.amazon.de/Canon-Digitalkamera-LCD-Touchscreen-Blendenautomatik-Zeitautomatik/dp/B07V7Y1813" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Canon DE Store (Black)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.canon.de/store/store/canon-powershot-g7-x-mark-iii-kompaktkamera-schwarz/3637C002/" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Canon DE Store (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.canon.de/store/store/canon-powershot-g7-x-mark-iii-kompaktkamera-silber/3638C002/" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="body" data-price="">
+      <td>Foto Brenner (Vlogkit)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>Lieferung - Versandkostenfrei ab 79€ (D)</td>
+      <td>Black Vlogkit</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.fotobrenner.de/canon-powershot-g7x-mark-iii-vlogger-kit-schwarz" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="body" data-price="">
+      <td>Foto Koch (Black)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>levertijd verwacht</td>
+      <td>Black body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.fotokoch.de/Canon-PowerShot-G7X-Mark-III-schwarz_24058.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="body" data-price="">
+      <td>Foto Koch (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.fotokoch.de/Canon-PowerShot-G7X-Mark-III-silber_24059.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Foto Mundus (Black)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.foto-mundus.de/digitalkameras/canon/33065/canon-powershot-g7-x-mark-iii-schwarz" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Foto Mundus (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.foto-mundus.de/digitalkameras/canon/33066/canon-powershot-g7-x-mark-iii-silber" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="out_of_stock" data-variant="refurbished" data-price="">
+      <td>MediaMarkt DE (Black)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-out">❌</span></td>
+      <td>Lieferung ab 29</td>
+      <td>Black body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.mediamarkt.de/de/product/_canon-powershot-g7-x-mark-iii-2575217.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="refurbished" data-price="">
+      <td>MediaMarkt DE (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>Lieferung ab 29</td>
+      <td>Silver body</td>
+      <td><span class="badge src-heuristic">heuristiek</span></td>
+      <td><a href="https://www.mediamarkt.de/de/product/_canon-powershot-g7-x-mark-iii-2575218.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Saturn DE (Black)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Black body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.saturn.de/de/product/_canon-powershot-g7-x-mark-iii-2575217.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Saturn DE (Silver)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Silver body</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.saturn.de/de/product/_canon-powershot-g7-x-mark-iii-2575218.html" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+<tr data-stock="unknown" data-variant="body" data-price="">
+      <td>Saturn DE (Vlogkit)</td>
+      <td class="price">❓</td>
+      <td><span class="badge stock-unknown">❓</span></td>
+      <td>—</td>
+      <td>Black Vlogkit</td>
+      <td><span class="badge src-other">—</span></td>
+      <td><a href="https://www.saturn.de/de/product/_canon-powershot-g7-x-mark-iii-vlogging-kit-2703298.html" target="_blank" rel="noopener">↗</a></td>
+    </tr></tbody></table>
+</main>
 
-  <footer>
-    <p>
-      Bron: GitHub repo <a href="https://github.com/RobertinoBlagrove/canonpowershot" target="_blank" rel="noopener">RobertinoBlagrove/CanonPowershot</a> ·
-      Run-snapshot in <code>history/2026-05-05T20-59-48Z.md</code> ·
-      Tracker bijgehouden via een Claude-Code routine.
-      Geen geraden waarden — alleen letterlijk in zoekresultaten gezien.
-    </p>
-  </footer>
-</div>
+<footer>
+  Commit <a href="https://github.com/RobertinoBlagrove/CanonPowershot/commit/e190131"><code>e190131</code></a> ·
+  Bron: <a href="https://github.com/RobertinoBlagrove/CanonPowershot">RobertinoBlagrove/CanonPowershot</a> ·
+  Hard-refresh: <kbd>Cmd+Shift+R</kbd> (Mac) / <kbd>Ctrl+Shift+R</kbd> (Windows)
+  <br><br>
+  Deze pagina ververst zichzelf bij elke run van de Mac mini /loop. De versheid-indicator hierboven werkt client-side en updatet elke 30 seconden.
+</footer>
 
 <script>
-(function(){
-  function parsePrice(txt){
-    if(!txt) return Number.POSITIVE_INFINITY;
-    var m = txt.replace(/\s/g,'').match(/€\s*([\d\.\,]+)/);
-    if(!m) return Number.POSITIVE_INFINITY;
-    var n = m[1].replace(/\./g,'').replace(',', '.');
-    var v = parseFloat(n);
-    return isNaN(v) ? Number.POSITIVE_INFINITY : v;
+  const RUN_TIMESTAMP = '2026-05-06T10:29:26.283Z';
+  function updateAge() {
+    const ageMs = Date.now() - new Date(RUN_TIMESTAMP).getTime();
+    const ageMin = Math.floor(ageMs / 60000);
+    const ageHr  = Math.floor(ageMin / 60);
+    const ageDay = Math.floor(ageHr / 24);
+    let txt, cls;
+    if (ageMin < 1)       { txt = 'net bijgewerkt';            cls = 'fresh'; }
+    else if (ageMin < 60) { txt = ageMin + ' min geleden';     cls = 'fresh'; }
+    else if (ageHr  < 24) { txt = ageHr  + ' uur geleden';     cls = 'fresh'; }
+    else if (ageHr  < 72) { txt = ageDay + ' dag(en) geleden'; cls = 'aging'; }
+    else                  { txt = ageDay + ' dagen geleden';   cls = 'stale'; }
+    const el = document.getElementById('age-indicator');
+    if (el) { el.textContent = txt; el.className = 'age-badge ' + cls; }
   }
-  document.querySelectorAll('table[data-sortable]').forEach(function(table){
-    var ths = table.querySelectorAll('th[data-sort]');
-    ths.forEach(function(th, idx){
-      th.addEventListener('click', function(){
-        var dir = th.classList.contains('sort-asc') ? 'desc' : 'asc';
-        ths.forEach(function(o){ o.classList.remove('sort-asc','sort-desc'); });
-        th.classList.add(dir === 'asc' ? 'sort-asc' : 'sort-desc');
-        var tbody = table.tBodies[0];
-        var rows = Array.prototype.slice.call(tbody.rows);
-        var type = th.getAttribute('data-sort');
-        rows.sort(function(a, b){
-          var ax = a.cells[idx].textContent.trim();
-          var bx = b.cells[idx].textContent.trim();
-          if(type === 'price'){
-            var av = parsePrice(ax); var bv = parsePrice(bx);
-            return dir === 'asc' ? av - bv : bv - av;
-          }
-          return dir === 'asc' ? ax.localeCompare(bx, 'nl') : bx.localeCompare(ax, 'nl');
-        });
-        rows.forEach(function(r){ tbody.appendChild(r); });
+  updateAge();
+  setInterval(updateAge, 30000);
+
+  // Filters
+  document.querySelectorAll('.filters button').forEach(b => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.filters button').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      const f = b.dataset.filter;
+      document.querySelectorAll('table.shops tbody tr').forEach(tr => {
+        let hide = false;
+        if (f === 'in_stock' && tr.dataset.stock !== 'in_stock') hide = true;
+        if (f === 'body'     && tr.dataset.variant !== 'body')   hide = true;
+        tr.style.display = hide ? 'none' : '';
       });
     });
   });
-})();
+
+  // Sortable headers (basic)
+  document.querySelectorAll('table.shops th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const tbody = th.closest('table').querySelector('tbody');
+      const rows = [...tbody.querySelectorAll('tr')];
+      const key = th.dataset.sort;
+      rows.sort((a, b) => {
+        if (key === 'price') {
+          const av = parseFloat(a.dataset.price) || Infinity;
+          const bv = parseFloat(b.dataset.price) || Infinity;
+          return av - bv;
+        }
+        if (key === 'stock') {
+          const order = { in_stock: 0, preorder: 1, unknown: 2, out_of_stock: 3 };
+          return (order[a.dataset.stock] ?? 9) - (order[b.dataset.stock] ?? 9);
+        }
+        return a.cells[0].textContent.localeCompare(b.cells[0].textContent);
+      });
+      rows.forEach(r => tbody.appendChild(r));
+    });
+  });
 </script>
 </body>
 </html>

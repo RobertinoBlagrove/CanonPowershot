@@ -4,3 +4,13 @@
 .idea/
 .vscode/
 node_modules/
+playwright-report/
+*.log
+scrape-results.json
+comparator-results.json
+merged-results.json
+targets.json
+github_pat.txt
+tracker-prompt.md
+.claude/
+
