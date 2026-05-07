@@ -625,5 +625,32 @@
     "variant_label": "Black body",
     "first_seen": "2026-05-06",
     "scrape_hints": {}
+  },
+  {
+    "shop": "Geizhals (Black)",
+    "country": "DE",
+    "url": "https://geizhals.de/canon-powershot-g7-x-mark-iii-schwarz-3637c002-a2090936.html",
+    "type": "comparator",
+    "variant_label": "Black body (vanaf-prijs)",
+    "first_seen": "2026-05-07",
+    "scrape_hints": {}
+  },
+  {
+    "shop": "Geizhals (Silver)",
+    "country": "DE",
+    "url": "https://geizhals.de/canon-powershot-g7-x-mark-iii-silber-3638c002-a2090941.html",
+    "type": "comparator",
+    "variant_label": "Silver body (vanaf-prijs)",
+    "first_seen": "2026-05-07",
+    "scrape_hints": {}
+  },
+  {
+    "shop": "Geizhals (Vlogger Kit)",
+    "country": "DE",
+    "url": "https://geizhals.de/canon-powershot-g7-x-mark-iii-schwarz-vlogger-kit-3637c027-a3184282.html",
+    "type": "comparator",
+    "variant_label": "Vlogger Kit (vanaf-prijs)",
+    "first_seen": "2026-05-07",
+    "scrape_hints": {}
   }
 ]
