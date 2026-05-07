@@ -652,5 +652,23 @@
     "variant_label": "Vlogger Kit (vanaf-prijs)",
     "first_seen": "2026-05-07",
     "scrape_hints": {}
+  },
+  {
+    "shop": "Idealo DE",
+    "country": "DE",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/6643970_-powershot-g7x-mark-iii-canon.html",
+    "type": "comparator",
+    "variant_label": "vanaf-prijs",
+    "first_seen": "2026-05-07",
+    "scrape_hints": {}
+  },
+  {
+    "shop": "Idealo FR",
+    "country": "FR",
+    "url": "https://www.idealo.fr/prix/6643970/canon-powershot-g7x-mark-iii.html",
+    "type": "comparator",
+    "variant_label": "vanaf-prijs",
+    "first_seen": "2026-05-07",
+    "scrape_hints": {}
   }
 ]

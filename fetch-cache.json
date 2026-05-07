@@ -226,5 +226,17 @@
     "last_attempt": "2026-05-07T04:43:59.987Z",
     "consecutive_fails": 0,
     "preferred_method": null
+  },
+  "www.idealo.de": {
+    "last_status": 503,
+    "last_attempt": "2026-05-07T07:43:48.732Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
+  },
+  "www.idealo.fr": {
+    "last_status": 503,
+    "last_attempt": "2026-05-07T07:43:56.109Z",
+    "consecutive_fails": 0,
+    "preferred_method": null
   }
 }
