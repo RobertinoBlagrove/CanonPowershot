@@ -6,7 +6,8 @@
     "type": "fotospeciaalzaak",
     "variant_label": "Silver body",
     "first_seen": "2026-05-05",
-    "scrape_hints": {}
+    "scrape_hints": {},
+    "discontinued": true
   },
   {
     "shop": "Coolblue NL (body)",
@@ -440,7 +441,7 @@
   {
     "shop": "Calumet DE (Black)",
     "country": "DE",
-    "url": "https://www.calumetphoto.de/product/canon-powershot-g7-x-mark-iii-schwarz/cang7xmiiibl",
+    "url": "https://www.calumet.de/product/canon-powershot-g7-x-mark-iii-schwarz/cang7xmiiibl",
     "type": "fotospeciaalzaak",
     "variant_label": "Black body",
     "first_seen": "2026-05-05",
@@ -449,7 +450,7 @@
   {
     "shop": "Calumet DE (Silver)",
     "country": "DE",
-    "url": "https://www.calumetphoto.de/product/canon-powershot-g7-x-mark-iii-silber",
+    "url": "https://www.calumet.de/product/canon-powershot-g7-x-mark-iii-silber",
     "type": "fotospeciaalzaak",
     "variant_label": "Silver body",
     "first_seen": "2026-05-05",
@@ -678,7 +679,9 @@
     "type": "fotospeciaalzaak",
     "variant_label": "Black body",
     "first_seen": "2026-05-08",
-    "scrape_hints": {"note": "Rate-limits at 429 — try with user-agent rotation"}
+    "scrape_hints": {
+      "note": "Rate-limits at 429 — try with user-agent rotation"
+    }
   },
   {
     "shop": "Cameraland.nl (Silver)",
@@ -705,7 +708,9 @@
     "type": "fotospeciaalzaak",
     "variant_label": "Black body",
     "first_seen": "2026-05-08",
-    "scrape_hints": {"out_of_stock_pattern": "DEZE CAMERA IS MOMENTEEL NIET IN STOCK"}
+    "scrape_hints": {
+      "out_of_stock_pattern": "DEZE CAMERA IS MOMENTEEL NIET IN STOCK"
+    }
   },
   {
     "shop": "Foto Grobet BE (Silver)",
@@ -723,7 +728,9 @@
     "type": "fotospeciaalzaak",
     "variant_label": "Black body",
     "first_seen": "2026-05-08",
-    "scrape_hints": {"note": "Lokaal: Dordrecht. Bel-mij optie."}
+    "scrape_hints": {
+      "note": "Lokaal: Dordrecht. Bel-mij optie."
+    }
   },
   {
     "shop": "Cameradeals.nl",
@@ -732,7 +739,9 @@
     "type": "comparator",
     "variant_label": "vergelijker",
     "first_seen": "2026-05-08",
-    "scrape_hints": {"is_aggregator": true}
+    "scrape_hints": {
+      "is_aggregator": true
+    }
   },
   {
     "shop": "Kaufland.de",
@@ -741,6 +750,8 @@
     "type": "retail-electronics",
     "variant_label": "Black body",
     "first_seen": "2026-05-08",
-    "scrape_hints": {"note": "Marketplace — multiple sellers per product"}
+    "scrape_hints": {
+      "note": "Marketplace — multiple sellers per product"
+    }
   }
 ]

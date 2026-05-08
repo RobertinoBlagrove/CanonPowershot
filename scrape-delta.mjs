@@ -115,6 +115,26 @@ for (const t of todo) {
         if (candidates.length) { out.price = candidates[0]; out.source = 'heuristic'; }
       }
 
+      // JSON-LD InStock override door zichtbare OOS-badges (per learnings 2026-05-08)
+      {
+        const txtLower = document.body.innerText.toLowerCase().slice(0, 30000);
+        const definitiveOos = [
+          /tijdelijk\s+uitverkocht/, /later\s+leverbaar/, /niet\s+leverbaar/,
+          /\buitverkocht\b/, /reserveer\s+nu/, /op\s+wachtlijst/,
+          /momenteel\s+niet\s+(in\s+stock|leverbaar)/, /houd\s+mij\s+op\s+de\s+hoogte/,
+          /nicht\s+lieferbar/, /\bausverkauft\b/, /bald\s+wieder\s+lieferbar/,
+          /liefertermin\s+offen/, /derzeit\s+nicht\s+verfügbar/,
+          /momentan\s+nicht\s+verfügbar/, /\bvergriffen\b/,
+          /momenteel\s+niet\s+in\s+stock/, /épuisé/, /rupture\s+de\s+stock/,
+          /\bsold\s+out\b/, /\bout\s+of\s+stock\b/, /currently\s+unavailable/
+        ];
+        const oosMatch = definitiveOos.find(r => r.test(txtLower));
+        if (oosMatch && out.stock === 'in_stock') {
+          out.stock_override = 'json_ld_overridden_by_visible_oos';
+          out.stock = 'out_of_stock';
+        }
+      }
+
       if (out.stock === 'unknown') {
         const txt = document.body.innerText.toLowerCase().slice(0, 30000);
         const outStockHard = [

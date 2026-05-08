@@ -140,6 +140,38 @@ for (const t of registry) {
         }
       }
 
+      // ── JSON-LD InStock OVERRIDE: zichtbare OOS-badges winnen ALTIJD ──
+      // KRITIEK: JSON-LD `availability: InStock` is BEKEND ONBETROUWBAAR voor de
+      // G7X Mark III. Veel shops (NEBO, Cameranu, Calumet DE, FotoMeyer) zetten
+      // InStock in structured data terwijl de zichtbare pagina expliciet
+      // "Tijdelijk uitverkocht" / "Later leverbaar" / "Bald wieder lieferbar" toont.
+      // Per manual-verify door user op 2026-05-08: deze override is verplicht.
+      {
+        const fullTxtLower = document.body.innerText.toLowerCase().slice(0, 30000);
+        const definitiveOos = [
+          /tijdelijk\s+uitverkocht/, /later\s+leverbaar/, /niet\s+leverbaar/,
+          /\buitverkocht\b/, /reserveer\s+nu/,            // Cameranu pattern
+          /op\s+wachtlijst/, /momenteel\s+niet\s+(in\s+stock|leverbaar)/,
+          /houd\s+mij\s+op\s+de\s+hoogte/,
+          // DE
+          /nicht\s+lieferbar/, /\bausverkauft\b/, /bald\s+wieder\s+lieferbar/,
+          /liefertermin\s+offen/, /derzeit\s+nicht\s+verfügbar/,
+          /momentan\s+nicht\s+verfügbar/, /\bvergriffen\b/,
+          // BE FR
+          /momenteel\s+niet\s+in\s+stock/,                // Foto Grobet pattern
+          /ce\s+produit\s+n'est\s+pas\s+en\s+stock/,
+          /épuisé/, /rupture\s+de\s+stock/, /produit\s+indisponible/,
+          // EN
+          /\bsold\s+out\b/, /\bout\s+of\s+stock\b/, /currently\s+unavailable/
+        ];
+        const oosMatch = definitiveOos.find(r => r.test(fullTxtLower));
+        if (oosMatch && out.stock === 'in_stock') {
+          out.stock_override = 'json_ld_overridden_by_visible_oos';
+          out.stock_override_pattern = oosMatch.toString().slice(0, 80);
+          out.stock = 'out_of_stock';
+        }
+      }
+
       // VOORRAAD-detectie via tekst (als JSON-LD niets gaf).
       // STRICT: ✅ in_stock alleen bij expliciete bevestiging EN geen tegen-signaal.
       // Out-of-stock checks RUNNEN EERST en winnen bij conflict. Default = unknown (❓).
