@@ -1,241 +1,241 @@
 {
   "www.fotokonijnenberg.nl": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:43:34.977Z",
+    "last_attempt": "2026-05-08T10:43:14.443Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.coolblue.nl": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:43:50.725Z",
+    "last_attempt": "2026-05-08T10:43:30.585Z",
     "consecutive_fails": 0,
     "preferred_method": "json-ld"
   },
   "www.cameranu.nl": {
     "last_status": 403,
-    "last_attempt": "2026-05-08T07:44:05.810Z",
+    "last_attempt": "2026-05-08T10:43:42.020Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.mediamarkt.nl": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:44:21.620Z",
+    "last_attempt": "2026-05-08T10:43:59.208Z",
     "consecutive_fails": 0,
     "preferred_method": "heuristic"
   },
   "www.amazon.nl": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:44:36.747Z",
+    "last_attempt": "2026-05-08T10:44:14.126Z",
     "consecutive_fails": 0,
     "preferred_method": "heuristic"
   },
   "www.bol.com": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:47:05.639Z",
+    "last_attempt": "2026-05-08T10:46:39.435Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.bcc.nl": {
     "last_status": 404,
-    "last_attempt": "2026-05-08T07:44:57.630Z",
+    "last_attempt": "2026-05-08T10:44:35.339Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.kamera-express.nl": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:45:18.430Z",
+    "last_attempt": "2026-05-08T10:44:53.978Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.fotodevakman.nl": {
     "last_status": 403,
-    "last_attempt": "2026-05-08T07:45:29.818Z",
+    "last_attempt": "2026-05-08T10:45:08.560Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.canon.nl": {
     "last_status": 403,
-    "last_attempt": "2026-05-08T07:45:38.821Z",
+    "last_attempt": "2026-05-08T10:45:18.670Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.neboweb.nl": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:45:44.220Z",
+    "last_attempt": "2026-05-08T10:45:23.503Z",
     "consecutive_fails": 0,
     "preferred_method": "json-ld"
   },
   "melskensvenray.nl": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:45:49.873Z",
+    "last_attempt": "2026-05-08T10:45:31.527Z",
     "consecutive_fails": 0,
     "preferred_method": "json-ld"
   },
   "www.mediamarkt.be": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:46:01.842Z",
+    "last_attempt": "2026-05-08T10:45:45.134Z",
     "consecutive_fails": 0,
     "preferred_method": "heuristic"
   },
   "www.coolblue.be": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:46:21.412Z",
+    "last_attempt": "2026-05-08T10:46:03.210Z",
     "consecutive_fails": 0,
     "preferred_method": "json-ld"
   },
   "www.vandenborre.be": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:46:34.985Z",
+    "last_attempt": "2026-05-08T10:46:17.096Z",
     "consecutive_fails": 0,
     "preferred_method": "heuristic"
   },
   "www.krefel.be": {
     "last_status": 500,
-    "last_attempt": "2026-05-08T07:46:45.347Z",
+    "last_attempt": "2026-05-08T10:46:29.093Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.amazon.com.be": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:47:12.481Z",
+    "last_attempt": "2026-05-08T10:46:45.437Z",
     "consecutive_fails": 0,
     "preferred_method": "heuristic"
   },
   "www.nl.fnac.be": {
     "last_status": 403,
-    "last_attempt": "2026-05-08T07:47:27.005Z",
+    "last_attempt": "2026-05-08T10:47:03.447Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.saturn.de": {
     "last_status": 403,
-    "last_attempt": "2026-05-08T07:47:44.645Z",
+    "last_attempt": "2026-05-08T10:47:20.682Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.mediamarkt.de": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:48:03.844Z",
+    "last_attempt": "2026-05-08T10:47:37.548Z",
     "consecutive_fails": 0,
     "preferred_method": "heuristic"
   },
   "www.amazon.de": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:48:18.411Z",
+    "last_attempt": "2026-05-08T10:47:53.368Z",
     "consecutive_fails": 0,
     "preferred_method": "heuristic"
   },
   "www.foto-erhardt.de": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:48:27.083Z",
+    "last_attempt": "2026-05-08T10:48:01.806Z",
     "consecutive_fails": 0,
     "preferred_method": "heuristic"
   },
   "www.fotokoch.de": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:48:40.086Z",
+    "last_attempt": "2026-05-08T10:48:19.567Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.calumetphoto.de": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:48:53.541Z",
+    "last_attempt": "2026-05-08T10:48:34.561Z",
     "consecutive_fails": 0,
     "preferred_method": "json-ld"
   },
   "www.foto-mundus.de": {
     "last_status": 404,
-    "last_attempt": "2026-05-08T07:49:05.752Z",
+    "last_attempt": "2026-05-08T10:48:46.829Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.fotomeyer.de": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:49:11.352Z",
+    "last_attempt": "2026-05-08T10:48:52.678Z",
     "consecutive_fails": 0,
     "preferred_method": "meta-tag"
   },
   "www.fotobrenner.de": {
     "last_status": 404,
-    "last_attempt": "2026-05-08T07:49:26.142Z",
+    "last_attempt": "2026-05-08T10:49:06.587Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.canon.de": {
     "last_status": 403,
-    "last_attempt": "2026-05-08T07:49:36.807Z",
+    "last_attempt": "2026-05-08T10:49:17.509Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.amazon.fr": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:49:48.846Z",
+    "last_attempt": "2026-05-08T10:49:30.597Z",
     "consecutive_fails": 0,
     "preferred_method": "heuristic"
   },
   "www.fnac.com": {
     "last_status": 403,
-    "last_attempt": "2026-05-08T07:49:56.732Z",
+    "last_attempt": "2026-05-08T10:49:39.132Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.darty.com": {
     "last_status": 403,
-    "last_attempt": "2026-05-08T07:50:02.284Z",
+    "last_attempt": "2026-05-08T10:49:45.004Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.boulanger.com": {
     "last_status": 400,
-    "last_attempt": "2026-05-08T07:50:06.976Z",
+    "last_attempt": "2026-05-08T10:49:50.122Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.digit-photo.com": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:50:30.115Z",
+    "last_attempt": "2026-05-08T10:50:12.416Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.missnumerique.com": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:50:35.493Z",
+    "last_attempt": "2026-05-08T10:50:21.296Z",
     "consecutive_fails": 0,
     "preferred_method": "json-ld"
   },
   "store.canon.fr": {
     "last_status": 403,
-    "last_attempt": "2026-05-08T07:50:12.288Z",
+    "last_attempt": "2026-05-08T10:49:55.199Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.canon.fr": {
     "last_status": 403,
-    "last_attempt": "2026-05-08T07:50:18.332Z",
+    "last_attempt": "2026-05-08T10:50:00.308Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.pixmania.com": {
     "last_status": 200,
-    "last_attempt": "2026-05-08T07:50:23.860Z",
+    "last_attempt": "2026-05-08T10:50:06.068Z",
     "consecutive_fails": 0,
     "preferred_method": "json-ld"
   },
   "geizhals.de": {
     "last_status": 403,
-    "last_attempt": "2026-05-08T07:50:56.109Z",
+    "last_attempt": "2026-05-08T10:50:41.292Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.idealo.de": {
     "last_status": 503,
-    "last_attempt": "2026-05-08T07:51:01.292Z",
+    "last_attempt": "2026-05-08T10:50:45.852Z",
     "consecutive_fails": 0,
     "preferred_method": null
   },
   "www.idealo.fr": {
     "last_status": 503,
-    "last_attempt": "2026-05-08T07:51:07.033Z",
+    "last_attempt": "2026-05-08T10:50:51.156Z",
     "consecutive_fails": 0,
     "preferred_method": null
   }
