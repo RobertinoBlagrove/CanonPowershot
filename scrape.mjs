@@ -190,6 +190,21 @@ for (const t of registry) {
           /e-mail mij wanneer (dit )?beschikbaar/,
           /stuur mij een bericht/,                    // bol.com notify
           /melde mich, sobald/,
+          // ── 11 mei 2026 toegevoegd na verdere foutpositieven ──
+          /\bwaarschuw mij\b/,                        // Digimaxx pattern
+          /levertijd onbekend/,                       // Digimaxx pattern
+          /houd mij op de hoogte/,                    // Cameranu pattern (when present)
+          /\breserveer nu\b/,                         // Cameranu — bestelknop bij OOS
+          /later leverbaar/,                          // Cameranu tooltip/badge
+          /informeer naar (de )?levertijd/,           // Foto Dom Melskens (NB: ook bij echte voorraad, zie hieronder)
+          /momenteel niet (in stock|leverbaar|verkrijgbaar)/,
+          /tijdelijk niet leverbaar/,                 // Cameraland pattern
+          /op de wachtlijst/, /wachtlijst staan/,     // Foto Grobet
+          /pre[\s-]?order/, /vorbestellbar/,          // Foto Erhardt schwarz
+          /bald wieder lieferbar/,                    // Calumet DE
+          /liefertermin offen/,                       // FotoMeyer
+          /\bvorbestellen\b/,                         // generieke DE pre-order
+          // ── einde 11 mei toevoegingen ──
           /\buitverkocht\b/, /\bausverkauft\b/, /\bvergriffen\b/,
           /\bsold out\b/, /\bout of stock\b/, /\bépuisé\b/,
           /\bniet (meer )?op voorraad\b/,

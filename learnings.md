@@ -99,3 +99,50 @@ De Canon G7X Mark III is per mei 2026 **breed uitverkocht** in NL/BE/DE. Geen en
 
 Volgende runs: focus op **refurbished** en **tweedehands** kanalen — zij hebben wel voorraad. Voorbeelden om toe te voegen: MPB.com (NL/EU), CameraJungle, Kamera Express Tweedehands sectie.
 
+## Run 2026-05-11 (handmatige verificatie 2)
+
+### Bot blijft ✅ toekennen aan 3 shops die GEEN voorraad hebben
+
+Geverifieerd via WebFetch op 11 mei:
+- **Digimaxx NL** (digimaxx.nl): page heeft "Levertijd onbekend" + "Waarschuw mij!" button. Bot matched `/\bin stock\b/` ergens op de pagina (waarschijnlijk in English snippet/SEO description) en zette ✅. FIX: add `/waarschuw mij/`, `/levertijd onbekend/` aan outStockHard. DONE in scrape.mjs.
+- **Cameranu (Black)** (cameranu.nl): "Reserveer nu" button + "Later leverbaar" status. Bot matched `/op voorraad/` ergens (filter UI?). FIX: add `/reserveer nu/`, `/later leverbaar/`, `/houd mij op de hoogte/` aan outStockHard. DONE.
+- **Kamera Express NL (30th)**: bot kreeg HTTP 200, matched `/op voorraad/` patroon, maar de pagina zelf is onverifieerbaar via Claude WebFetch (403). FIX: voor KE pages zonder kit/body in URL is "op voorraad" pattern niet voldoende. Kan niet betrouwbaar van afstand worden vastgesteld. **Aanbeveling**: markeer KE 30th altijd als ❓ tenzij JSON-LD harde InStock + price geeft.
+
+### ECHTE voorraad gevonden (11 mei)
+
+✅ **Foto Brenner Silver** (€899) — fotobrenner.de — "Sofort versandfertig 1-2 Werktage" — levert ook naar NL  
+✅ **Foto Dom Melskens** (€999) — melskensvenray.nl — "Slechts 1 exemplaar op voorraad" (Silver Occasion)  
+✅ **Foto Brenner Vlogger Kit Black** — uit search snippet (URL stale, opnieuw zoeken volgende run)  
+✅ **Foto Brenner Streaming Kit Black** — uit search snippet  
+
+Foto Brenner is dus de enige reguliere Duitse retailer die de G7X III nog op voorraad heeft. Levert binnen EU.
+
+### Nieuwe shops toegevoegd (11 mei)
+- **Back Market DE** (refurbished) — backmarket.de — 3 listings, 12mo garantie
+- **Marktplaats NL** — particuliere verkopers, 5 nieuwe aanbiedingen €1000-1150
+- **2dehands BE** — particulier
+- **Rebuy NL** — refurbished kanaal
+
+### scrape.mjs updates (11 mei)
+Toegevoegd aan outStockHard regex-lijst:
+```
+/\bwaarschuw mij\b/,        // Digimaxx
+/levertijd onbekend/,        // Digimaxx
+/houd mij op de hoogte/,    // Cameranu notify-button
+/\breserveer nu\b/,         // Cameranu OOS bestelknop
+/later leverbaar/,           // Cameranu badge
+/informeer naar (de )?levertijd/,
+/momenteel niet (in stock|leverbaar|verkrijgbaar)/,
+/tijdelijk niet leverbaar/,  // Cameraland
+/op de wachtlijst/, /wachtlijst staan/,  // Foto Grobet
+/pre[\s-]?order/, /vorbestellbar/,        // Foto Erhardt
+/bald wieder lieferbar/,                  // Calumet DE
+/liefertermin offen/,                     // FotoMeyer
+/\bvorbestellen\b/,
+```
+
+### TODO volgende run
+- Heroverwegen `/\bop voorraad\b/` in inStockHard — te breed, matched filter-UI. Eis proximity tot prijs of "vandaag besteld" zin.
+- Foto Brenner zoek-strategie: hun product-URLs veranderen. Doe altijd eerst `site:fotobrenner.de "G7X Mark III"` zoekquery om actuele URLs te vinden.
+- 30th Anniversary scrape blijft onbetrouwbaar — overweeg deze altijd ❓ markeren tenzij price + JSON-LD InStock + verified mark_iii.
+

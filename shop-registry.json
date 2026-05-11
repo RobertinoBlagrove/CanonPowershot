@@ -753,5 +753,59 @@
     "scrape_hints": {
       "note": "Marketplace — multiple sellers per product"
     }
+  },
+  {
+    "shop": "Back Market DE",
+    "country": "DE",
+    "url": "https://www.backmarket.de/de-de/p/canon-powershot-g7-x-mark-iii/9ccc0327-d7d4-45e1-90fa-dbf31215993f",
+    "type": "refurbished",
+    "variant_label": "Refurbished Grey/Black body",
+    "first_seen": "2026-05-11",
+    "scrape_hints": {
+      "note": "Refurbished kanaal — 12mo garantie, 30d retour"
+    }
+  },
+  {
+    "shop": "Back Market DE (Black v2)",
+    "country": "DE",
+    "url": "https://www.backmarket.de/de-de/p/canon-powershot-g7x-mark-iii-kompaktkamera-schwarz/e83ef879-02af-4c83-b865-5379799f9cc6",
+    "type": "refurbished",
+    "variant_label": "Refurbished Black body",
+    "first_seen": "2026-05-11",
+    "scrape_hints": {}
+  },
+  {
+    "shop": "Marktplaats NL",
+    "country": "NL",
+    "url": "https://www.marktplaats.nl/l/audio-tv-en-foto/fotocamera-s-digitaal/q/canon+powershot+g7x+mark+iii/",
+    "type": "marketplace",
+    "variant_label": "particulier — nieuwe + tweedehands aanbiedingen",
+    "first_seen": "2026-05-11",
+    "scrape_hints": {
+      "is_aggregator": true,
+      "note": "particuliere verkopers, geen winkel"
+    }
+  },
+  {
+    "shop": "Rebuy NL",
+    "country": "NL",
+    "url": "https://www.rebuy.nl/verkopen/digitale-camera-s/canon-powershot-g7x-mark-iii-zilver_12468045",
+    "type": "refurbished",
+    "variant_label": "Refurbished/used",
+    "first_seen": "2026-05-11",
+    "scrape_hints": {
+      "note": "Rebuy = (op)kopen+verkopen; check ook of zij voorraad aanbieden"
+    }
+  },
+  {
+    "shop": "2dehands BE",
+    "country": "BE",
+    "url": "https://www.2dehands.be/l/audio-tv-en-foto/fotocamera-s-digitaal/q/canon+g7x/",
+    "type": "marketplace",
+    "variant_label": "particulier",
+    "first_seen": "2026-05-11",
+    "scrape_hints": {
+      "is_aggregator": true
+    }
   }
 ]
