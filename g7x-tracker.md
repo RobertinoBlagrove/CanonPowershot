@@ -1,18 +1,36 @@
 # Canon PowerShot G7 X Mark III — Tracker
 
-_Laatst bijgewerkt: 2026-05-11 (handmatige verificatie + Foto Brenner & Melskens bevestigd op voorraad)_
+_Laatst bijgewerkt: 2026-05-14 (handmatige run — Foto Mundus DE nieuw bevestigd, cloud-routine ligt sinds 10 mei stil)_
 _Live: https://robertinoblagrove.github.io/CanonPowershot/_
 
-> ⚠️ **Handmatig geverifieerd 11 mei 2026** — bot meldde Digimaxx, Cameranu Black en Kamera Express 30th als ✅, maar live verificatie toont dat ze allemaal ❌ zijn (Digimaxx zegt expliciet "Levertijd onbekend + Waarschuw mij"). Twee echte ✅ gevonden: **Foto Brenner Silver (DE)** en **Foto Dom Melskens (NL, 1 exemplaar)**.
+> ⚠️ **Manuele run 14 mei 2026** — cloud-routine inactief sinds 10 mei 19:52 UTC. **3 echte op-voorraad shops bevestigd via live WebFetch**. Geizhals/Idealo lijst meerdere shops als "in stock" maar bij directe verificatie blijken die vaak feitelijk niet leverbaar (Kücher AT, Digitalstore AT). Vanden Borre BE heeft een concrete leverdatum: **21 mei**.
 
-## 🟢 ECHTE VOORRAAD (bevestigd 11 mei)
+## 🟢 ECHTE VOORRAAD (bevestigd 14 mei via live WebFetch)
 
-| Winkel | Land | Prijs | Variant | Status | Link |
-|--------|------|------:|---------|--------|------|
-| **Foto Brenner** | 🇩🇪 | **€899,00** | Silver body | ✅ **Sofort versandfertig 1-2 werkdagen** | [productpagina](https://www.fotobrenner.de/canon-powershot-g7-x-iii-silber) |
-| **Foto Dom Melskens** | 🇳🇱 | **€999,00** | Silver body (Occasion) | ✅ **Slechts 1 exemplaar op voorraad** | [productpagina](https://melskensvenray.nl/product/canon-powershot-g7x-mkiii/) |
-| Foto Brenner Vlogger Kit | 🇩🇪 | ❓ | Black Vlogger Kit | ✅ "Sofort versandfertig" (via zoekresultaat, URL stale) | [zoekresultaat](https://www.google.com/search?q=%22sofort+versandfertig%22+site%3Afotobrenner.de+G7X+Mark+III) |
-| Foto Brenner Streaming Kit | 🇩🇪 | ❓ | Black Streaming Kit | ✅ "Sofort versandfertig" (via zoekresultaat) | dezelfde shop |
+| Winkel | Land | Prijs | Variant | Levertijd | Link |
+|--------|------|------:|---------|-----------|------|
+| **🥇 Foto Brenner** | 🇩🇪 | **€899,00** | Silver body | ✅ **Sofort versandfertig 1-2 werkdagen** | [productpagina](https://www.fotobrenner.de/canon-powershot-g7-x-iii-silber) |
+| **🥈 Foto Mundus** | 🇩🇪 | **€979,99** | Black body | ✅ **Auf Lager 1-3 werkdagen** | [productpagina](https://www.foto-mundus.de/digitalkameras/canon/33065/canon-powershot-g7-x-mark-iii-schwarz) |
+| **🥉 Foto Dom Melskens** | 🇳🇱 | **€999,00** | Silver Occasion | ✅ **Slechts 1 exemplaar** | [productpagina](https://melskensvenray.nl/product/canon-powershot-g7x-mkiii/) |
+| 🟡 Vanden Borre | 🇧🇪 | €999,00 | Black body | 🟡 **Beschikbaar vanaf donderdag 21 mei** (backorder met datum!) | [productpagina](https://www.vandenborre.be/fototoestel/canon-powershot-g7x-mark-iii-black) |
+
+## 🟡 Volgens Geizhals/Idealo claimen op voorraad (NIET geverifieerd — claim van vergelijker)
+
+| Winkel | Land | Prijs | Variant | Geizhals-status |
+|--------|------|------:|---------|----------------|
+| Foto15 | 🇦🇹 | €949,00 | Silver | "In Stock" |
+| United Camera | 🇦🇹 | €949,00 | Black | "Sofort lieferbar" 1-2d |
+| Foto Lamprechter | 🇦🇹 | €949,00 | Black | "Sofort lieferbar" 1-2d |
+| dz-ecomshop | 🇩🇪 | €999,00 | Black | "In stock" (+€25 shipping) |
+| jn-distribution | 🇩🇪 | €1.008,95 | Black | 2-5d |
+| bestchancedeals | 🇩🇪 | €1.007,99 | Silver | 2-4d |
+| east-side-stuff | 🇩🇪 | €1.024,95 | Silver | "In stock" |
+| os-com | 🇩🇪 | €1.009,00 | Black | 2-4d |
+| photoporst365de | 🇩🇪 | €1.049,00 | Silver | 3d |
+| limitedmansion | 🇩🇪 | €1.049,99 | Silver | 1-4d |
+| tm_store | 🇩🇪 | €1.055,00 | Silver | 2d |
+
+⚠️ **Waarschuwing**: Bij directe verificatie blijkt Geizhals-data vaak onbetrouwbaar voor voorraad — Kücher AT en Digitalstore AT staan op "Sofort lieferbar" maar zeggen op hun eigen pagina "Nicht lagernd / 3-4 Wochen Lieferzeit". Bij interesse: bel/mail de winkel eerst.
 
 ## Samenvatting
 
